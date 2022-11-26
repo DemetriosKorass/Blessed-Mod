@@ -1,0 +1,38 @@
+default = {
+	super_heavy_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/super_heavy_tank.dds"  
+			}
+		}
+	}	
+	modern_tank_chassis_1 = {
+		pool = {
+			weight = 20
+			icons = {
+				"gfx/interface/technologies/main_battle_tank.dds" 			
+			}
+		}
+	}	
+}
+
+GRE = {
+	super_heavy_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/gre_superheavy_tank.dds"  
+			}
+		}
+	}	
+	modern_tank_chassis_1 = {
+		pool = {
+			weight = 20
+			icons = {
+				"gfx/interface/technologies/gre_main_battle_tank.dds"  
+			}
+		}
+		}	
+}
+
+
+

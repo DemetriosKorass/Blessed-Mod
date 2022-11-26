@@ -1,0 +1,72 @@
+
+leader_traits = {
+	
+	BM_Kass = {
+		random = no
+
+		stability_factor = 0.50
+		trade_opinion_factor = 0.50
+		political_power_factor = 0.50
+	}
+	
+	BM_Boris = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = -0.05
+	}
+	
+	bm_achellia_georgiannis = { 
+		random = no
+		sprite = 1
+		
+		air_close_air_support_attack_factor = 0.1
+		air_close_air_support_defence_factor = 0.1
+		air_close_air_support_agility_factor = 0.1		
+		experience_gain_air = 0.2
+		
+		command_cap = @tier3
+	}
+	
+	bm_miras = {
+		random = no
+		sprite = 15
+		
+		resistance_activity = -0.25
+		resistance_damage_to_garrison = -0.25
+		operative_slot = 2
+		resistance_decay = 0.2
+		compliance_gain = 0.2
+		stability_factor = -0.1
+	}
+	bm_morgianna = {
+		random = no
+		sprite = 12
+		
+		consumer_goods_factor = -0.08
+		trade_opinion_factor = 0.50
+		min_export = -0.1
+		production_speed_buildings_factor = 0.1 
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+	}
+	bm_seilah = {
+		random = no
+		sprite = 14
+		
+		research_speed_factor = 0.42
+	}
+	bm_supreme_firepower = {
+		sprite = 14
+		experience_gain_army = 0.27
+		cat_superior_firepower_cost_factor = -0.27
+		equipment_bonus = {
+			artillery = {
+				instant = yes
+				soft_attack  = 0.27
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

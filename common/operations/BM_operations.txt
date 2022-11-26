@@ -1,0 +1,275 @@
+bm_rhodes_plot = { 
+	icon = GFX_operations_boost_resistance
+	map_icon = GFX_operations_boost_resistance_map
+	name = bm_rhodes_plot
+	desc = bm_rhodes_plot_desc
+	priority = 8
+	
+	cost_multiplier = 0.25
+	
+	days = 30
+	network_strength = 50
+	operatives = 2
+
+	visible = {
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+		
+		has_country_flag = BM_flag_rhodos_plot
+	#	ROOT = {
+	#		NOT = { 
+	#			controls_state = 164
+	#		}
+	#	}
+	}
+
+	selection_target = {
+		targets = { FROM }
+	}
+
+	selection_target_state = {
+		state = 164
+	}
+
+	equipment = {
+		infantry_equipment = 600
+	}
+
+	risk_chance = 0.2
+	experience = 1.5
+	outcome_extra_chance = 0.25
+	outcome_modifiers = { boost_resistance_factor }
+	outcome_execute = {
+		custom_effect_tooltip = bm_rhodos_uprising_tt
+		hidden_effect = {
+			FROM = {
+				delete_unit = { 
+					state = 164             
+					disband = no
+				 }
+			
+				164 = {
+					transfer_state_to = ROOT
+					if = {
+						limit = { has_resistance = yes }
+						set_resistance = 0
+					}
+
+					ROOT = {
+						if = {
+							limit = { NOT = { has_country_flag = created_civil_war_template } }
+							set_country_flag = created_civil_war_template
+								
+							division_template = {
+								name = "Resistance"
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+						
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									
+									infantry = { x = 2 y = 0 }
+									infantry = { x = 2 y = 1 }
+								}
+							}
+						}
+					}
+					for_loop_effect = {
+									end = 3
+									
+						create_unit = {
+							division = "division_template = \"Resistance\" start_experience_factor = 0.75 start_equipment_factor = 1"
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+	}
+
+	outcome_potential = {
+		custom_effect_tooltip = bm_rhodos_uprising_tt
+	}
+
+	
+	target_weight = {
+		base = 100
+		
+		modifier = {
+			add = boost_resistance_chance
+		}
+		
+		modifier = {
+			set_temp_variable = { t = distance_to@ROOT.capital }
+			divide_temp_variable = { t = 600 }
+			clamp_temp_variable = { var = t min = 0 max = 1 }
+			multiply_temp_variable = { t = -40 }
+			
+			add = t
+		}
+	}
+	
+	phases = { #infiltration
+		infiltration_border = { base = 50 }
+		infiltration_submarine = { base = 25 }
+		infiltration_paradrop = { 
+			base = 25 
+		}
+	}
+	phases = { #resistance support
+		resistance_support_arms_depots = { base = 25 }
+		resistance_support_distribute_weapons = { base = 25 }
+		resistance_support_organize_training = { base = 25 }
+		resistance_support_coordinate_groups = { base = 25 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 15 
+		}
+		exfiltration_border = { base = 30 }
+		exfiltration_go_to_ground = { base = 30 }
+		exfiltration_submarine_pickup = { base = 25 }
+	}
+}
+
+bm_cyprus_plot = { 
+	icon = GFX_operations_boost_resistance
+	map_icon = GFX_operations_boost_resistance_map
+	name = bm_cyprus_plot
+	desc = bm_cyprus_plot_desc
+	priority = 8
+	
+	cost_multiplier = 0.25
+	
+	days = 30
+	network_strength = 50
+	operatives = 2
+
+	visible = {
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+		
+		has_country_flag = BM_flag_cyprus_plot
+		ROOT = {
+			NOT = { 
+				controls_state = 183
+			}
+		}
+	}
+
+	selection_target = {
+		targets = { FROM }
+	}
+
+	selection_target_state = {
+		state = 183
+	}
+
+	equipment = {
+		infantry_equipment = 1000
+	}
+
+	risk_chance = 0.2
+	experience = 1.5
+	outcome_extra_chance = 0.25
+	outcome_modifiers = { boost_resistance_factor }
+	outcome_execute = {
+		custom_effect_tooltip = bm_rhodos_uprising_tt
+		hidden_effect = {
+			FROM = {
+				delete_unit = { 
+					state = 183             
+					disband = no
+				 }
+			
+				183 = {
+					transfer_state_to = ROOT
+					if = {
+						limit = { has_resistance = yes }
+						set_resistance = 0
+					}
+
+					ROOT = {
+						if = {
+							limit = { NOT = { has_country_flag = created_civil_war_template } }
+							set_country_flag = created_civil_war_template
+								
+							division_template = {
+								name = "Resistance"
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+						
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									
+									infantry = { x = 2 y = 0 }
+									infantry = { x = 2 y = 1 }
+								}
+							}
+						}
+					}
+					for_loop_effect = {
+									end = 5
+									
+						create_unit = {
+							division = "division_template = \"Resistance\" start_experience_factor = 0.75 start_equipment_factor = 1"
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+	}
+
+	outcome_potential = {
+		custom_effect_tooltip = bm_rhodos_uprising_tt
+	}
+
+	
+	target_weight = {
+		base = 100
+		
+		modifier = {
+			add = boost_resistance_chance
+		}
+		
+		modifier = {
+			set_temp_variable = { t = distance_to@ROOT.capital }
+			divide_temp_variable = { t = 600 }
+			clamp_temp_variable = { var = t min = 0 max = 1 }
+			multiply_temp_variable = { t = -40 }
+			
+			add = t
+		}
+	}
+	
+	phases = { #infiltration
+		infiltration_border = { base = 50 }
+		infiltration_submarine = { base = 25 }
+		infiltration_paradrop = { base = 25	}
+	}
+	phases = { #resistance support
+		resistance_support_arms_depots = { base = 25 }
+		resistance_support_distribute_weapons = { base = 25 }
+		resistance_support_organize_training = { base = 25 }
+		resistance_support_coordinate_groups = { base = 25 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { base = 15 }
+		exfiltration_border = { base = 30 }
+		exfiltration_go_to_ground = { base = 30 }
+		exfiltration_submarine_pickup = { base = 25 }
+	}
+}

@@ -1,0 +1,34 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_kassia"
+		texturefile = "gfx/leaders/portrait_gre_kassiopeia_anatophoris_3.dds"
+	}
+	spriteType = {
+		name = "GFX_boris"
+		texturefile = "gfx/leaders/portrait_gre_aris_anatophoris.dds"
+	}
+	spriteType = {
+		name = "GFX_seilah"
+		texturefile = "gfx/interface/ideas/portrait_gre_seila_olsson.dds"
+	}
+	spriteType = {
+		name = "GFX_morgana"
+		texturefile = "gfx/interface/ideas/portrait_gre_morgianna_angelos.dds"
+	}
+	spriteType = {
+		name = "GFX_miras_anatophoris"
+		texturefile = "gfx/interface/ideas/portrait_gre_miras_anataphoris.dds"
+	}
+	spriteType = {
+		name = "GFX_achellia_georgiannis"
+		texturefile = "gfx/interface/ideas/portrait_gre_achellia_georgiannis.dds"
+	}
+	spriteType = {
+		name = "GFX_alexandra_stoicheiomenos"
+		texturefile = "gfx/interface/ideas/portrait_gre_alexandra_stoicheiomenos.dds"
+	}
+	spriteType = {
+		name = "GFX_aikatarina_anatophoris"
+		texturefile = "gfx/leaders/portrait_gre_aikatarina_anatophoris.dds"
+	}
+}

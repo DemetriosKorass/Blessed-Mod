@@ -1,0 +1,153 @@
+ideas = {
+
+	country = { 
+		
+		BM_idea_coup_instability_1 = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = chi_war_of_resistance3
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = -0.05				
+				political_power_gain = -0.2
+			}
+		}
+		
+		BM_idea_coup_instability_2 = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = chi_war_of_resistance
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.05
+				stability_weekly = -0.02	
+				political_power_gain = -0.1
+			}
+		}
+		
+		GRE_kass_debuff_2 = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.4
+				political_advisor_cost_factor = 0.50
+				political_power_gain = -0.2
+				war_support_factor = -0.1
+			}
+		}
+		GRE_kass_debuff_1 = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = generic_monarchist_uprising
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = -0.2
+				political_power_gain = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		BM_idea_kass_plus_morale = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = generic_monarchist_uprising
+				
+			removal_cost = -1
+				
+			modifier = {
+				political_power_factor = 0.2
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		BM_idea_kass_war_plus_morale = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = generic_monarchist_uprising
+				
+			removal_cost = -1
+				
+			modifier = {
+				offence = 0.1
+				defence = 0.2
+			}
+		}
+	}
+	hidden_ideas = {
+		real_kassia_power = {
+	  		allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+                monthly_population = 1
+				research_speed_factor = 0.2
+				min_export = -0.1
+				trade_opinion_factor = 2
+				neutrailty_drift = 0.1
+				
+				
+				send_volunteer_divisions_required = -0.9
+				send_volunteers_tension = -0.5
+				generate_wargoal_tension = -0.5
+				
+				opinion_gain_monthly_factor = 2
+				annex_cost_factor = 0.1
+				
+				female_random_army_leader_chance = 0.3
+				max_command_power_mult = 2
+			}
+		}
+		praise_the_21 = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				intel_network_gain_factor = 1
+				own_operative_capture_chance_factor = -10
+				own_operative_detection_chance_factor = -10
+				operative_death_on_capture_chance = -10
+				operation_outcome = 0.5
+				operation_cost = -0.8
+				operative_slot = 3	   
+				enemy_operative_detection_chance_factor = 1
+				enemy_operative_capture_chance_factor = 1
+			}
+		}
+	}
+}

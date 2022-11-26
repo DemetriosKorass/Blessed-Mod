@@ -1,0 +1,171 @@
+characters={
+
+	GRE_aris_anatophoris={
+		name=GRE_aris_anatophoris
+		portraits={
+			army={
+				small = GFX_idea_gre_aris_velouchiotis
+				large = GFX_boris 
+			}
+		}
+		corps_commander = {
+			traits = { war_hero harsh_leader }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GRE_aris_anatophoris
+			name = GRE_aris_anatophoris
+			allowed = {
+				original_tag = GRE
+			}
+			traits = {
+				army_chief_offensive_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}	
+		}			
+	}
+	
+	GRE_seilah_olsson={
+		name = GRE_seilah_olsson
+		gender = female 
+		portraits={
+			army={
+				small = GFX_seilah
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_seilah_olsson
+			name = GRE_seilah_olsson
+			allowed = {
+				original_tag = GRE
+			}
+			visible = {
+				has_completed_focus = BM_new_government
+			}
+			traits = {
+				bm_seilah
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}	
+		}		
+	}
+	GRE_morgianna_angelos={
+		name = GRE_morgianna_angelos
+		gender = female 
+		portraits={
+			army={
+				small = GFX_morgana
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_morgianna_angelos
+			name = GRE_morgianna_angelos
+			allowed = {
+				original_tag = GRE
+			}
+			visible = {
+				has_completed_focus = BM_new_government
+			}
+			traits = {
+				bm_morgianna
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}	
+		}		
+	}
+	GRE_miras_anatophoris={
+		name = GRE_miras_anatophoris
+		portraits={
+			army={
+				small = GFX_miras_anatophoris
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_miras_anatophoris
+			name = GRE_miras_anatophoris
+			allowed = {
+				original_tag = GRE
+			}
+			visible = {
+				has_completed_focus = BM_new_government
+			}
+			traits = {
+				bm_miras
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}	
+		}		
+	}
+	GRE_achellia_georgiannis={
+		name = GRE_achellia_georgiannis
+		gender = female 
+		portraits={
+			army={
+				small = GFX_achellia_georgiannis
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GRE_achellia_georgiannis
+			name = GRE_achellia_georgiannis
+			allowed = {
+				original_tag = GRE
+			}
+			visible = {
+				has_completed_focus = BM_new_government
+			}
+			traits = {
+				bm_achellia_georgiannis
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}	
+		}		
+	}
+	
+	GRE_alexandra_stoicheiomenos={
+		name = GRE_alexandra_stoicheiomenos
+		gender = female 
+		portraits={
+			army={
+				small = GFX_alexandra_stoicheiomenos
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = GRE_alexandra_stoicheiomenos
+			name = GRE_alexandra_stoicheiomenos
+			allowed = {
+				original_tag = GRE
+			}
+			visible = {
+				has_completed_focus = BM_new_government
+			}
+			traits = {
+				bm_supreme_firepower
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}	
+		}		
+	}
+}

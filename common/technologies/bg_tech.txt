@@ -1,0 +1,15 @@
+technologies = {
+
+	BM_spg_tech = {
+			enable_equipment_modules = {
+				tank_super_heavy_howitzer
+				tank_super_heavy_aa
+			}
+	}
+	
+	BM_firestrikes_tech = {
+		enable_equipment_modules = {
+			pyr_ammo_storage
+		}
+	}
+}		

@@ -1,0 +1,645 @@
+add_namespace = bm_events
+
+#King is dead and generals took power
+country_event = {
+	id = bm_events.1
+	title = bm_events.1.t
+	desc = bm_events.1.desc
+	picture = GFX_report_event_gre_political_march
+
+	fire_only_once = yes
+	
+	trigger={
+		has_country_flag = BM_flag_king_got_killed
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = bm_events.1.a
+		
+		custom_effect_tooltip = bm_events_1_tt
+		
+		hidden_effect = {
+			GRE_aris_anatophoris = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "9000.1.1"
+						ideology = despotism
+						traits = {
+							BM_Boris
+						}
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = { ideology = neutrality name = BM_military_junta long_name = BM_military_junta_long}
+			
+			add_ideas = { BM_idea_coup_instability_1 }
+			remove_ideas = { GRE_george_ii }
+			remove_mission = GRE_the_election_of_1936
+			
+			ROM = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+			every_other_country = {
+				limit = {
+					has_opinion_modifier = BFTB_balkan_pact_ally
+				}
+				remove_opinion_modifier = {
+					target = GRE
+					modifier = BFTB_balkan_pact_ally
+				}
+				hidden_effect = {
+					ROOT = {
+						remove_opinion_modifier = {
+							target = PREV
+							modifier = BFTB_balkan_pact_ally
+						}
+					}
+				}
+			}
+			
+			ENG = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences_eng1 }
+			}
+			TUR = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences }
+			}
+			BUL = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences }
+			}
+			ROM = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences }
+			}
+			YUG = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences }
+			}
+			ALB = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences }
+			}
+			
+			USA = { country_event = { id = bm_events.2 }}
+			FRA = { country_event = { id = bm_events.2 }}
+			GER = { country_event = { id = bm_events.2 }}
+			ITA = { country_event = { id = bm_events.2 }}
+			SOV = { country_event = { id = bm_events.2 }}
+			JAP = { country_event = { id = bm_events.2 }}
+			SWE = { country_event = { id = bm_events.2 }}
+			
+			set_country_flag = GRE_1936_election
+			set_country_flag = BM_flag_anatophoris_coup
+			clr_country_flag = BM_flag_king_got_killed
+			
+			set_country_flag = GRE_factions_unlocked
+			set_variable = { var = GRE_monarchist_loyalty value = 2 } 
+			set_variable = { var = GRE_communist_loyalty value = -1 } 
+			set_variable = { var = GRE_republican_loyalty value = -1 } 
+			GRE_political_instability_update_effect = yes
+		}
+	}		
+}
+
+country_event = {
+	id = bm_events.2
+	title = bm_events.2.t
+	desc = bm_events.2.desc
+	picture = GFX_report_event_gre_political_march
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.2.a
+		
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+		}
+		
+		custom_effect_tooltip = bm_events_2a_tt
+		
+		hidden_effect = {
+			add_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences }
+			GRE = { 
+				country_event = { 
+					id = bm_events.3 
+					days = 2
+					random = 4
+					random_days = 3
+				}
+			}
+		}
+	}	
+	option = {
+		name = bm_events.2.b
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+		}
+		custom_effect_tooltip = bm_events_2b_tt
+	}		
+}
+
+country_event = {
+	id = bm_events.3
+	title = bm_events.3.t
+	desc = bm_events.3.desc
+	picture = GFX_report_event_gre_political_march
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.3.a
+	}			
+}
+
+country_event = {
+	id = bm_events.10
+	title = bm_events.10.t
+	desc = bm_events.10.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	fire_only_once = yes
+	
+	trigger={
+		has_country_flag = BM_flag_allies_approached
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = bm_events.10.a
+		hidden_effect = {
+			ENG = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_like }
+				country_event = { id = bm_events.11 }
+			}
+			USA = { 				
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_like }
+				country_event = { id = bm_events.11 }
+			}
+			FRA = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_like }
+				country_event = { id = bm_events.11 }
+			}
+			
+			GER = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_dislike }
+				country_event = { id = bm_events.11 } 
+			}
+			ITA = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_dislike }
+				country_event = { id = bm_events.11 } 
+			}
+			
+			JAP = { country_event = { id = bm_events.11 }}
+			
+			SOV = { country_event = { id = bm_events.11 }}
+			SWE = { country_event = { id = bm_events.11 }}
+		}
+	}			
+}
+
+country_event = {
+	id = bm_events.11
+	title = bm_events.11.t
+	desc = bm_events.11.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.11.a
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}	
+	option = {
+		name = bm_events.11.b
+		trigger = {
+			is_in_faction_with = ENG
+		}
+	}
+	option = {
+		name = bm_events.11.c
+		trigger = {
+			NOT = {
+				is_in_faction_with = ENG
+				is_in_faction_with = GER
+			}
+		}
+	}	
+}
+
+country_event = {
+	id = bm_events.20
+	title = bm_events.20.t
+	desc = bm_events.20.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	fire_only_once = yes
+	
+	trigger={
+		has_country_flag = BM_flag_axis_approached
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = bm_events.20.a
+		hidden_effect = {
+			ENG = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_dislike }
+				country_event = { id = bm_events.21 }
+			}
+			USA = { 				
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_dislike }
+				country_event = { id = bm_events.21 }
+			}
+			FRA = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_dislike }
+				country_event = { id = bm_events.21 }
+			}
+			
+			GER = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_like }
+				country_event = { id = bm_events.21 } 
+			}
+			ITA = { 
+				add_opinion_modifier = { target = GRE modifier = BM_om_faction_like }
+				country_event = { id = bm_events.21 } 
+			}
+			
+			JAP = { country_event = { id = bm_events.21 }}
+			
+			SOV = { country_event = { id = bm_events.21 }}
+			SWE = { country_event = { id = bm_events.21 }}
+		}
+	}			
+}
+
+country_event = {
+	id = bm_events.21
+	title = bm_events.21.t
+	desc = bm_events.21.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.21.a
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}	
+	option = {
+		name = bm_events.21.b
+		trigger = {
+			is_in_faction_with = ENG
+		}
+	}
+	option = {
+		name = bm_events.21.c
+		trigger = {
+			NOT = {
+				is_in_faction_with = ENG
+				is_in_faction_with = GER
+			}
+		}
+	}	
+}
+
+country_event = {  #Ask for Cypriot Enosis
+	id = bm_events.30
+	title = bm_events.30.t
+	desc = bm_events.30.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.30.a
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 40
+				has_opinion = {
+					target = FROM
+					value > 40
+				}
+			}
+			modifier = {
+				add = 100
+				has_opinion = {
+					target = FROM
+					value > 90
+				}
+			}
+			modifier = {
+				add = 100
+				is_in_faction_with = FROM
+			}
+			modifier = {
+				add = 50
+				FROM = {
+					has_completed_focus = BM_approach_allies
+				}
+			}
+		}
+		
+		GRE = { 
+			country_event = { 
+				id = bm_events.31 
+				days = 10 
+			}
+		}
+	}	
+	option = {
+		name = bm_events.30.b
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 90
+				AND = {
+					is_in_faction = yes
+					NOT = {
+						is_in_faction_with = FROM
+					}
+				}
+			}	
+			modifier = {
+				add = 40
+				has_opinion = {
+					target = FROM
+					value < 40
+				}
+			}
+			modifier = {
+				add = 100
+				has_opinion = {
+					target = FROM
+					value < 0
+				}
+			}
+			modifier = {
+				add = 100
+				FROM = {
+					has_completed_focus = BM_approach_allies
+				}
+			}
+		}
+		GRE = { 
+			country_event = { 
+				id = bm_events.32 
+				days = 10 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bm_events.31
+	title = bm_events.31.t
+	desc = bm_events.31.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.31.a
+
+		183 = {
+			transfer_state_to = GRE
+		}
+		hidden_effect = {
+			clr_country_flag = BM_flag_cyprus_asked
+		}
+	}	
+}
+
+country_event = {
+	id = bm_events.32
+	title = bm_events.32.t
+	desc = bm_events.32.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.32.a
+
+		GRE = {
+			add_opinion_modifier = {
+				target = FROM 
+				modifier = BM_om_denied_enosis 
+			}
+		}
+		custom_effect_tooltip = enosis_denied
+		hidden_effect = {
+			set_country_flag = BM_flag_cyprus_plot
+		}
+	}	
+}
+
+country_event = {
+	id = bm_events.33
+	title = bm_events.33.t
+	desc = bm_events.33.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.33.a
+
+		GRE = {
+			add_opinion_modifier = {
+				target = FROM 
+				modifier = BM_om_denied_enosis 
+			}
+		}
+		custom_effect_tooltip = enosis_denied
+		hidden_effect = {
+			clr_country_flag = BM_flag_cyprus_plot
+		}
+	}	
+}
+
+country_event = {		#Ask for Rhodosian Enosis
+	id = bm_events.40
+	title = bm_events.40.t
+	desc = bm_events.40.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.40.a
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 40
+				has_opinion = {
+					target = FROM
+					value > 40
+				}
+			}
+			modifier = {
+				add = 100
+				has_opinion = {
+					target = FROM
+					value > 90
+				}
+			}
+			modifier = {
+				add = 100
+				is_in_faction_with = FROM
+			}
+			modifier = {
+				add = 50
+				FROM = {
+					has_completed_focus = BM_approach_axis
+				}
+			}
+		}
+		
+		GRE = { 
+			country_event = { 
+				id = bm_events.41 
+				days = 10 
+			}
+		}
+	}	
+	option = {
+		name = bm_events.40.b
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				add = 90
+				AND = {
+					is_in_faction = yes
+					NOT = {
+						is_in_faction_with = FROM
+					}
+				}
+			}	
+			modifier = {
+				add = 40
+				has_opinion = {
+					target = FROM
+					value < 40
+				}
+			}
+			modifier = {
+				add = 100
+				has_opinion = {
+					target = FROM
+					value < 0
+				}
+			}
+			modifier = {
+				add = 100
+				FROM = {
+					has_completed_focus = BM_approach_allies
+				}
+			}
+		}
+		
+		GRE = { 
+			country_event = { 
+				id = bm_events.42 
+				days = 10 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bm_events.41
+	title = bm_events.41.t
+	desc = bm_events.41.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.41.a
+		164 = {
+			transfer_state_to = GRE
+		}
+		hidden_effect = {
+			clr_country_flag = BM_flag_rhodes_asked
+		}
+	}	
+}
+
+country_event = {
+	id = bm_events.42
+	title = bm_events.42.t
+	desc = bm_events.42.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.42.a
+
+		GRE = {
+			add_opinion_modifier = {
+				target = FROM 
+				modifier = BM_om_denied_enosis 
+			}
+		}
+		custom_effect_tooltip = enosis_denied
+		hidden_effect = {
+			set_country_flag = BM_flag_rhodos_plot
+		}
+	}	
+}
+
+country_event = {
+	id = bm_events.43
+	title = bm_events.43.t
+	desc = bm_events.43.desc
+	picture = GFX_report_event_gre_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.43.a
+		
+		custom_effect_tooltip = enosis_denied
+		hidden_effect = {
+			clr_country_flag = BM_flag_rhodos_plot
+		}
+	}	
+}

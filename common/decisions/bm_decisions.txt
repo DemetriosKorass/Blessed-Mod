@@ -1,0 +1,513 @@
+bm_category = {
+
+	bm_decision_kassia_plus_morale = {
+
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = BM_flag_kassia_rules 
+			NOT = { has_country_flag = BM_flag_recent_kassia_journey}
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = BM_idea_kass_plus_morale
+				days = 120
+			}
+			hidden_effect = { 
+				set_country_flag = {
+					flag = BM_flag_recent_kassia_journey 
+					days = 120
+					value = 1
+				}
+			}
+		}
+	}
+	
+	bm_decision_kassia_war_plus_morale = {
+
+		allowed = {
+			 original_tag = GRE
+		}
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			has_country_flag = BM_flag_kassia_rules 
+			NOT = { has_country_flag = BM_flag_recent_kassia_speech}
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			add_war_support = 0.05
+			add_timed_idea = {
+				idea = BM_idea_kass_war_plus_morale
+				days = 120
+			}
+			hidden_effect = { 
+				set_country_flag = {
+					flag = BM_flag_recent_kassia_speech 
+					days = 120
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+GRE_1936_election_category = {
+	
+	GRE_put_the_king_under_house_arrest_21 = {
+	
+		icon = generic_arrest
+
+		allowed = { 
+			original_tag = GRE
+		}
+		visible = {
+			NOT = { 
+				OR = {
+					has_country_flag = GRE_1936_election 
+					has_country_flag = GRE_kings_government
+					has_country_flag = GRE_king_arrested
+				}
+			}
+		}
+		fire_only_once = yes
+		
+		available = {
+			date < 1936.01.21
+		}
+
+		cost = 0
+		
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GRE_1936_arrest_the_king_21_tt
+			set_country_flag = BM_flag_king_got_killed
+			add_stability = -0.20
+		}		
+	} 
+}
+
+
+bm_islands_category = {
+	
+	bm_decision_ask_cyprus = {
+
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+
+		}
+
+		visible = {
+			NOT = {	has_country_flag = BM_flag_cyprus_asked }
+			NOT = {	owns_state = 183 }
+			has_completed_focus = BM_our_islands
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = ask_cyprus_tt
+			hidden_effect = { 
+				ENG = { country_event = { id = bm_events.30 } }
+				set_country_flag = BM_flag_cyprus_asked 
+			}
+		}
+	}
+	
+	bm_decision_ask_rhodes = {
+
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+		
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		visible = {
+			NOT = {	has_country_flag = BM_flag_rhodes_asked }
+			NOT = {	owns_state = 164 }
+			has_completed_focus = BM_our_islands
+		}
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = ask_rhodes_tt
+			hidden_effect = { 
+				ITA = { country_event = { id = bm_events.40 } }
+				set_country_flag = BM_flag_rhodes_asked
+			}
+		}
+	}
+	
+	bm_decision_plot_cyprus = {
+
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			NOT = {	has_country_flag = BM_flag_cyprus_plot }
+			NOT = {	owns_state = 183 }
+			has_completed_focus = BM_our_islands
+		}
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = plot_cyprus_tt
+			hidden_effect = { 
+				set_country_flag = BM_flag_cyprus_plot 
+			}
+		}
+	}
+	
+	bm_decision_plot_rhodes = {
+
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+			always = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			NOT = {	has_country_flag = BM_flag_rhodos_plot }
+			NOT = {	owns_state = 164 }
+			has_completed_focus = BM_our_islands 
+		}
+		
+		cost = 100
+		
+		complete_effect = {
+			custom_effect_tooltip = plot_rhodes_tt
+			hidden_effect = { 
+				set_country_flag = BM_flag_rhodos_plot 
+			}
+		}
+	}
+}
+
+bm_kassia_ambitions_category = {
+
+	bm_decision_claim_turkey = {
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+			always = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			NOT = {	has_country_flag = bm_flag_turkey_claimed }
+			has_completed_focus = BM_queens_ambitions 
+		}
+		
+		cost = 150
+		
+		complete_effect = {
+			custom_effect_tooltip = form_country_turkey_coring_states_tt
+			hidden_effect = {
+				341 = { add_core_of = ROOT }
+				340 = { set_state_name = "Thracia" }
+				set_province_name = { id = 947 name = "Prusa" }
+				340 = { add_core_of = ROOT }
+				340 = { set_state_name = "Prusa" }
+				set_province_name = { id = 947 name = "Prusa" }
+				339 = { add_core_of = ROOT }
+				339 = { set_state_name = "Samos" }
+				set_province_name = { id = 4112 name = "Smyrna" }
+				342 = { add_core_of = ROOT }
+				342 = { set_state_name = "Cibyrrhaeot" }
+				set_province_name = { id = 1005 name = "Attaleia" }
+				343 = { add_core_of = ROOT }
+				343 = { set_state_name = "Thrakesion" }
+				set_province_name = { id = 9878 name = "Nicopolis" }
+				set_province_name = { id = 10041 name = "Attouda" }
+				347 = { add_core_of = ROOT }
+				347 = { set_state_name = "Optimaton" }
+				set_province_name = { id = 11811 name = "Nikomedeia" }
+				set_province_name = { id = 904 name = "Pontoheraclea" }
+				49 = { add_core_of = ROOT }
+				49 = { set_state_name = "Bukellarion" }
+				set_province_name = { id = 11747 name = "Ancyra" }
+				set_province_name = { id = 3951 name = "Dorylaion" }
+				346 = { add_core_of = ROOT }
+				346 = { set_state_name = "Anatolikon" }
+				set_province_name = { id = 940 name = "Ikonion" }
+				345 = { add_core_of = ROOT }
+				345 = { set_state_name = "Seleucia" }
+				set_province_name = { id = 10056 name = "Hadrianopolis" }
+				356 = { add_core_of = ROOT }
+				356 = { set_state_name = "Paphlagonia" }
+				set_province_name = { id = 6995 name = "Sinope" }
+				set_province_name = { id = 6938 name = "Kastamone" }
+				348 = { add_core_of = ROOT }
+				348 = { set_state_name = "Cappadocia" }
+				set_province_name = { id = 3870 name = "Caesarea" }
+				344 = { add_core_of = ROOT }
+				344 = { set_state_name = "Cilicia" }
+				set_province_name = { id = 11746 name = "Tarsus" }
+				set_province_name = { id = 886 name = "Germanicia" }
+				set_province_name = { id = 9893 name = "Ravanda" }
+				355 = { add_core_of = ROOT }
+				355 = { set_state_name = "Armeniakon" }
+				set_province_name = { id = 11881 name = "Amisos" }
+				349 = { add_core_of = ROOT }
+				349 = { set_state_name = "Koloneia" }
+				set_province_name = { id = 9777 name = "Sebasteia" }
+				798 = { add_core_of = ROOT }
+				798 = { set_state_name = "Carsiano" }
+				set_province_name = { id = 919 name = "Amaseia" }
+				set_province_name = { id = 3862 name = "Taouion" }
+				350 = { add_core_of = ROOT }
+				350 = { set_state_name = "Melitene" }
+				set_province_name = { id = 7620 name = "Melitene" }
+				set_province_name = { id = 9823 name = "Justinopolis" }
+				set_province_name = { id = 4512 name = "Amida" }
+				354 = { add_core_of = ROOT }
+				354 = { set_state_name = "Chaldia" }
+				set_province_name = { id = 9932 name = "Trebizond" }
+				353 = { add_core_of = ROOT }
+				353 = { set_state_name = "Manzikert" }
+				set_province_name = { id = 11853 name = "Theodosiopolis" }
+				352 = { add_core_of = ROOT }
+				352 = { set_state_name = "Hubushkia" }
+				set_province_name = { id = 12476 name = "Kondylis" }
+				800 = { add_core_of = ROOT }
+				800 = { set_state_name = "Vaspurakan" }
+				set_province_name = { id = 6935 name = "Eua" }
+				799 = { add_core_of = ROOT }
+				799 = { set_state_name = "Antioch" }
+				set_province_name = { id = 12029 name = "Antiochia" }
+				set_country_flag = bm_flag_turkey_claimed
+			}
+		}
+	}
+	
+	bm_decision_claim_bulgaria = {
+		allowed = {
+			original_tag = GRE
+		}
+
+		available = {
+			always = yes
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			NOT = {	has_country_flag = bm_flag_bulgaria_claimed }
+			has_completed_focus = BM_queens_ambitions 
+		}
+		
+		days_remove = 60
+		
+		cost = 75
+		
+		complete_effect = {
+			custom_effect_tooltip = form_country_boulgarias_coring_states_tt
+			hidden_effect = {
+				48 = { add_core_of = ROOT }
+				48 = { set_state_name = "Philippopolis" }
+				set_province_name = { id = 949 name = "Serdica" }
+				212 = { add_core_of = ROOT }
+				212 = { set_state_name = "Philippopolis" }
+				set_province_name = { id = 6923 name = "Philippopolis" }
+				211 = { add_core_of = ROOT }
+				211 = { set_state_name = "Pyrgos" }
+				set_province_name = { id = 9902 name = "Poros" }
+				set_province_name = { id = 9783 name = "Odessos" }
+				106 = { add_core_of = ROOT }
+				106 = { set_state_name = "Strymon" }
+				set_province_name = { id = 3882 name = "Scupi" }
+				731 = { set_state_name = "Macedonia" }
+				801 = { add_core_of = ROOT }
+				set_country_flag = bm_flag_bulgaria_claimed
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				target = BUL
+				type = take_state_focus
+				generator = { 48 212 211  801 }
+			}
+		}
+	}
+
+bm_kassia_adv_ambitions_category = {
+
+	bm_decision_claim_balkans = {
+		# Albania
+		custom_effect_tooltip = form_country_dyrrachium_coring_states_tt
+		hidden_effect = {
+			44 = { add_core_of = ROOT }
+			44 = { set_state_name = "Illyria" }
+			set_province_name = { id = 9914 name = "Kastrioti" }
+			set_province_name = { id = 11767 name = "Aulon" }
+			105 = { add_core_of = ROOT }
+			105 = { set_state_name = "Dyrrhachion" }
+			set_province_name = { id = 9809 name = "Dyrrhachium" }
+			805 = { add_core_of = ROOT }
+			set_province_name = { id = 914 name = "Argyrokastro" }
+		}
+		# Romania
+		custom_effect_tooltip = form_country_paristrion_coring_states_tt
+		hidden_effect = {
+			82 = { add_core_of = ROOT }
+			82 = { set_state_name = "Pannonia" }
+			81 = { add_core_of = ROOT }
+			48 = { set_state_name = "Wallachia" }
+			set_province_name = { id = 6652 name = "Pelendavia" }
+			46 = { add_core_of = ROOT }
+			46 = { set_state_name = "Paristrion" }
+			set_province_name = { id = 9617 name = "Kosmidis" }
+			set_province_name = { id = 3663 name = "Tarnopolis" }
+			77 = { add_core_of = ROOT }
+			77 = { set_state_name = "Anchialus" }
+			set_province_name = { id = 11597 name = "Mesembria" }
+			766 = { add_core_of = ROOT }
+			766 = { set_state_name = "Silistra" }
+			set_province_name = { id = 6727 name = "Velissarios" }
+		}
+		# Yugoslavia
+		custom_effect_tooltip = form_country_sirmium_coring_states_tt
+		hidden_effect = {
+			102 = { add_core_of = ROOT }
+			853 = { add_core_of = ROOT }
+			103 = { add_core_of = ROOT }
+			set_province_name = { id = 3924 name = "Spalatum" }
+			109 = { add_core_of = ROOT }
+			set_province_name = { id = 11581 name = "Venizelos" }
+			104 = { add_core_of = ROOT }
+			104 = { set_state_name = "Bosona" }
+			45 = { add_core_of = ROOT }
+			107 = { add_core_of = ROOT }
+			107 = { set_state_name = "Sirmium" }
+			set_province_name = { id = 11586 name = "Belograd" }
+			108 = { add_core_of = ROOT }
+			108 = { set_state_name = "Pizren" }
+			set_province_name = { id = 9602 name = "Naissus" }
+			802 = { add_core_of = ROOT }
+			803 = { add_core_of = ROOT }
+			804 = { add_core_of = ROOT }
+			764 = { add_core_of = ROOT }
+		}
+	}
+		
+	bm_decision_claim_italy = {
+		# Italy
+		custom_effect_tooltip = form_eu_italy_coring_states_tt
+		hidden_effect = {
+			158 = { add_core_of = ROOT }
+			159 = { add_core_of = ROOT }
+			39 = { add_core_of = ROOT }
+			160 = { add_core_of = ROOT }
+			161 = { add_core_of = ROOT }
+			162 = { add_core_of = ROOT }
+			157 = { add_core_of = ROOT }
+			2 = { add_core_of = ROOT }
+			117 = { add_core_of = ROOT }
+			156 = { add_core_of = ROOT }
+			115 = { add_core_of = ROOT }
+			736 = { add_core_of = ROOT }
+			849 = { add_core_of = ROOT }
+			850 = { add_core_of = ROOT }
+			852 = { add_core_of = ROOT }
+			163 = { add_core_of = ROOT }
+		}
+	}
+	
+	bm_decision_claim_levant = {
+		custom_effect_tooltip = bm_decision_claim_levant_tt
+		hidden_effect = {
+			677 = { add_core_of = ROOT }
+			680 = { add_core_of = ROOT }
+			553 = { add_core_of = ROOT } 
+			554 = { add_core_of = ROOT }
+			453 = { add_core_of = ROOT }
+			454 = { add_core_of = ROOT }
+			455 = { add_core_of = ROOT }
+			183 = { add_core_of = ROOT }
+			799 = { add_core_of = ROOT }
+		}
+	}
+	
+	bm_decision_claim_egypt = {
+		custom_effect_tooltip = bm_decision_claim_egypt_tt
+		hidden_effect = {
+			452 = { add_core_of = ROOT }
+			447 = { add_core_of = ROOT }
+			446 = { add_core_of = ROOT }
+			456 = { add_core_of = ROOT }
+			457 = { add_core_of = ROOT }
+			907 = { add_core_of = ROOT }
+		}
+	}
+	
+	bm_decision_claim_north_afrika = {
+		custom_effect_tooltip = bm_decision_claim_north_afrika_tt
+		hidden_effect = {
+			458 = { add_core_of = ROOT }
+			665 = { add_core_of = ROOT }
+			449 = { add_core_of = ROOT }
+			662 = { add_core_of = ROOT }
+			448 = { add_core_of = ROOT }
+			661 = { add_core_of = ROOT }
+			450 = { add_core_of = ROOT }
+			451 = { add_core_of = ROOT }
+			663 = { add_core_of = ROOT }
+		}	
+	}
+}

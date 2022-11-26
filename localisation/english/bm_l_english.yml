@@ -1,0 +1,333 @@
+﻿l_english:
+
+ GRE_kassiopeia_anatophoris:0 "Kassiopeia Anatophoris"
+ GRE_aris_anatophoris:0 "Aris Anatophoris"
+ GRE_seilah_olsson:0 "Seilah Olsson"
+ GRE_morgianna_angelos:0 "Morgianna Angelos"
+ GRE_miras_anatophoris:0 "Miras Anatophoris"
+ GRE_achellia_georgiannis:0 "Achellia Georgiannis"
+ GRE_alexandra_stoicheiomenos:0 "Alexandra Stoicheioménos"
+ 
+ BM_Kass:0 "Beloved Empress"
+ BM_Boris:0 "Steel General"
+ bm_seilah:0 "Young Genius"
+ bm_morgianna:0 "Finance Lioness"
+ bm_miras:0 "Spy Agency Chief"
+ bm_achellia_georgiannis:0 "Strike Aviation Expert"
+ bm_supreme_firepower:0 "Firepower Doctrinologist"
+ 
+ 
+ BM_military_junta:0 "Military council"
+ BM_military_junta_long:0 "General Anatophoris' Regime"
+ BM_imperial_loyalists:0 "Loyalists"
+ BM_imperial_loyalists_long:0 "Imperial Loyalists"
+ 
+
+ GRE_put_the_king_under_house_arrest_21:0 "Harshly arrest the king"
+ GRE_put_the_king_under_house_arrest_21_desc:0 "With support of the military accuse the king of the nasty undoings he was planning to win election. However, giving generals such a possibility might cause some unforseen events..."
+ GRE_1936_arrest_the_king_21_tt:0 "Something bad migh happen to the poor king..."
+ 
+ bm_category:0 "Imperial Throne Decisions"
+  bm_decision_kassia_plus_morale:0 "Conduct a royal trip"
+  bm_decision_kassia_plus_morale_desc:0 "Her Majesty will perform an all-country journey, visiting its regions and cities and inspiring population."
+  bm_decision_kassia_war_plus_morale:0 "Perform a war speech"
+  bm_decision_kassia_war_plus_morale_desc:0 "Her Majesty will perform an outstanding speech, motivating our soldiers for great deeds."
+  
+ 
+ #Events
+ bm_events.1.t:0 "King is dead and generals took power!"
+ bm_events.1.desc:0 "As it became officially known by last day, King George II has been found dead inside his prison cell. All symptoms point to the sudden heart attack, but everyone's having some rather peculiar suspitions... "
+ bm_events.1.a:0 "Yet another coup..."
+ bm_events_1_tt:0 "King George II dies, while prominent general and popular hero of turkish war Aris Anatophoris takes his place as an acting despot. This might anger George's close relatives..."
+ 
+ bm_events.2.t:0 "Military coup in Greece!"
+ bm_events.2.desc:0 "It is known that George II, infamous greek king of british descend is dead! Circumstances are exactly unknown and highly suspicious, and official version is heart attack. Nevertheless, prominent general and popular hero of turkish war Aris Anatophoris seized power and cancelled democratic elections, which is preposterous!"
+ bm_events.2.a:0 "Outrageous!"
+ bm_events.2.b:0 "My delegation would like to express concern over this most dubious situation..."
+ bm_events_2a_tt:0 "We will commit various diplomatic actions to condemn such flagrant actions! Our relations with Greece will be significally worsened."
+ bm_events_2b_tt:0 "We will do exactly nothing. Another coup in Greece - who cares?"
+ 
+ bm_events.3.t:0 "[From.Owner.GetName] condemns us!"
+ bm_events.3.desc:0 "It is became known that [From.Owner.GetName] recalls its diplomats from our country, and speak of our recent events as an outraging display of tyranny."
+ bm_events.3.a:0 "That could be worse..."
+ 
+ bm_events.10.t:0 "Allies concillium accepts our aspirations!"
+ bm_events.10.desc:0 "Our diplomats inform us of great succes - joint concillium of all Allied countries stated that they would like to see us rather with them, then otherwise. However, there's a lot of work ahead..."
+ bm_events.10.a:0 "Good"
+ 
+ bm_events.11.t:0 "[From.Owner.GetName] aspires to join Allies!"
+ bm_events.11.desc:0 "It seems that [From.Owner.GetAdjective] diplomats reached some agreement with their Allied colleagues, making a joint statement - [From.Owner.GetName] is joining Allies! However, there's a lot of work to be done by both sides."
+ bm_events.11.a:0 "We'll conquer those bastards too!"
+ bm_events.11.b:0 "We're glad for them."
+ bm_events.11.c:0 "Whatever..."
+ 
+ bm_events.20.t:0 "Axis representatives accepts our aspirations!"
+ bm_events.20.desc:0 "Our diplomats inform us of great succes - joint concillium of all Axis countries stated that they would like to see us rather with them, then otherwise. However, there's a lot of work ahead..."
+ bm_events.20.a:0 "Good"
+ 
+ bm_events.21.t:0 "[From.Owner.GetName] sides with Axis!"
+ bm_events.21.desc:0 "It seems that [From.Owner.GetAdjective] diplomats reached some agreement with their Axis colleagues, making a joint statement - [From.Owner.GetName] is joining this war alliance! However, there's a lot of work to be done by both sides."
+ bm_events.21.a:0 "Hope they would be more useful than romanians..."
+ bm_events.21.b:0 "Preposteus!"
+ bm_events.21.c:0 "That's concerning..."
+ 
+ bm_events.30.t:0 "[From.Owner.GetName] asks for Cyprus."
+ bm_events.30.desc:0 "Cyprus ownership is being discussed since ages ago, but recently [From.Owner.GetAdjective] queen herself has reached to us with request - she asks for long-postponed enosis with our island, and according to her word it will make us more profit to return it to honest ally then prolongate the hated occupation of their people. Should we allow enosis or no?"
+ bm_events.30.a:0 "Allow them to conduct a referendum."
+ bm_events.30.b:0 "Give away our land? Never!"
+ 
+ bm_events.31.t:0 "Cyprus is back!"
+ bm_events.31.desc:0 "Since damned 1204 Cyprus was separated from [From.Owner.GetAdjective] mainland by damned crusaders, but was not separated culturally. And that was prooved on this week's referendum for unification. All world just wonders how Kassiopeia managed to pull that out!"
+ bm_events.31.a:0 "United we stand!"
+ 
+ bm_events.32.t:0 "Enosis denied!"
+ bm_events.32.desc:0 "It was quite obvious for everyone but quite a shock for Kassiopeia to hear that Brits do not indend to give back Cyprus to us, not directly, not by any other mean. It means either we will back down on our unification ambtions, or we have to go another way..."
+ bm_events.32.a:0 "Noone dares to disappoint Her Majesty!"
+ enosis_denied:0 "Corresponding spy mission is now available. Maybe its time for some less diplomatic means..."
+ 
+ bm_events.33.t:0 "Operation success!"
+ bm_events.33.desc:0 "All was done within few days - having british arsenals sabotaged, communications cut they stood no chanse against our carefully planned plot. They had no choise but to agree to not to push this issue if we promise to release all their captives and their equipment, but this may have an impact on our future relationships..."
+ bm_events.33.a:0 "They'd better agreed on this at start."
+ 
+ bm_events.34.t:0 "Cyprus revolts!"
+ bm_events.34.desc:0 "Cypriot rebellion against English occupation was like rapid forest fire - it all begun from minor accident and quickly grown to a full-scale uprising. So-called militia caught british garrison with surprise and overrun them within days. With Limas and Nicosia under total militia control only choise for british troops was to evacuate, having no time to wait for reinforcements. After this unexpected victory rebels declared their intentions to join Hellenic state, thus finally reuniting greek people of occident islands. British response is still unknown. However, Kassiopea Anatophoris, prominent monarch of [From.Owner.GetName], speaks of putting great effort honoring the fallen in this most grief accident and working together with local autorities to mend the consequences and stabilize the region."
+ bm_events.34.a:0 "Is it an end of british influence in the region?"
+ 
+ bm_events.40.t:0 "[From.Owner.GetName] asks for Dodecanese."
+ bm_events.40.desc:0 "Dodecanese islands were taken by us prior to Great war from dying Ottoman empire, and by now it is our property. But it is scarcely populated, almost have no infrastructure, and have its use only for war with Greece or Turkey, which we obvioulsly would not pland to do. Maybe it's better to return it to [From.Owner.GetName], since their irresistible ruler asks so?"
+ bm_events.40.a:0 "Dont forget to wrap it!"
+ bm_events.40.b:0 "Give away our land? Never!"
+ 
+ bm_events.41.t:0 "Rhodos is back!"
+ bm_events.41.desc:0 "Rhodos and few near islands were snatched away by Italy when we were to weak to do something about this. Now, by outstanding diplomatic perfomance of Kassiopeia, people of this territories may again enjoy our unification!" 
+ bm_events.41.a:0 "United we stand!"
+ 
+ bm_events.42.t:0 "Enosis denied!"
+ bm_events.42.desc:0 "It was quite obvious for everyone but quite a shock for Kassiopeia to hear that Italians do not indend to give back Rhodos to us, not directly, not by any other mean. It means either we will back down on our unification ambtions, or we have to go another way..."
+ bm_events.42.a:0 "Noone dares to disappoint Her Majesty!"
+
+ bm_events.43.t:0 "Operation success!"
+ bm_events.43.desc:0 "All was done within few days - having italian arsenals sabotaged, communications cut they stood no chanse against our carefully planned plot. They had no choise but to agree to not to push this issue if we promise to release all their captives and their equipment, but this may have an impact on our future relationships..."
+ bm_events.43.a:0 "They'd better agreed on this at start."
+ 
+ bm_events.44.t:0 "Rhodos revolts!"
+ bm_events.44.desc:0 "Rhodosian rebellion against Italian occupation was like rapid forest fire - it all begun from minor accident and quickly grown to a full-scale uprising. So-called militia caught italian garrison with surprise and overrun them within days. With Rhodos under total militia control only choise for italian troops was to evacuate, having no time to wait for reinforcements. After this unexpected victory rebels declared their intentions to join Hellenic state, thus finally reuniting greek people of occident islands. British response is still unknown. However, Kassiopea Anatophoris, prominent monarch of [From.Owner.GetName], speaks of putting great effort honoring the fallen in this most grief accident and working together with local autorities to mend the consequences and stabilize the region."
+ bm_events.44.a:0 "Italians defeated? How could this be?"
+ 
+ #Focuses
+ BM_deal_with_consequences:0 "Dealing with Consequences"
+ BM_deal_with_consequences_desc:0 "Recent events left our country in a horible mess - disorder in the streets, rumbling polititians, incooperable government, even from outside we hear condemning advertisments. Its either we will overcome all those obstacles, or perish underside their sheer volume."
+ 
+ BM_reanimate_foreign_diplomacy:0 "Reanimate Foreign Diplomacy"
+ BM_reanimate_foreign_diplomacy_desc:0 "We must put an end to vile rumors that are destroing our foreign reputation. Securing good and cooperative relationships with our neighbours and partners we will secure a prosperous future for ourselves."
+ BM_reanimate_foreign_diplomacy_tt:0 "Remove corresponding relationship penalty from neighbouring countries."
+ 
+ BM_internal_affairs:0 "Internal Affairs"
+ BM_internal_affairs_desc:0 "It takes a steady hand to calm all revolting public we face after dire events of January '36, because despite of king's unpopularity people found cancellation of democratic elections too tyrannical to bear with. By doing necessary changes in laws and populistic advertising, as well as few arrest of insurgents, we will prevent our country collaps."
+ 
+ BM_reassure_britain:0 "Reassure Britain"
+ BM_reassure_britain_desc:0 "Great Britain has been our ally since independence war, and we must put it to them, that all what happened was just a tremendous misunderstanding, and we should maintain friedly relations. Only in grief does one find his true friends! Some of our diplomats has a very good feeling of this..."
+ 
+ BM_maintain_status_quo:0 "Maintain Status Quo"
+ BM_maintain_status_quo_desc:0 "Recent situation has shown us our partners' true nature - if something goes against their selfish interests, they will abandon us for our own vain. We must learn from this lesson and find new allies, especially among those who know bitter taste of betrayal..."
+ 
+ BM_approach_allies:0 "Approach Allies"
+ BM_approach_allies_desc:0 "Astonishing success of previous diplomatic procedure must continue to work in our favor. By drifting us closer to Allies we will ensure not only military protection, but promising markets as well..."
+ BM_approach_someone_tt:0 "Diplomatic decisions with corresponding countries becomes available."
+ 
+ BM_approach_axis:0 "Approach Axis"
+ BM_approach_axis_desc:0 "Approaching Axis is a risky move - but we're being forced to commit it. By siding ourselves with fascist we may achieve all our dreams, or, perhaps, loose everything again."
+
+ BM_our_islands:0 "Our Islands"
+ BM_our_islands_desc:0 "Kýpros and Rhodos have become a victims of western colonization. This must eventually end, and both our diplomats and soldiers are ready to make that end sooner."
+ BM_our_islands_tt:0 "Means for reaquirement of Cyprus and Rhodes became available via decisions."
+ 
+ BM_panhellenism:0 "Panhellenism"
+ BM_panhellenism_desc:0 "Once hellenic people were most numerous people of mediterrean. By uniting them all under our flag we will make both us significally stronger. No longer will world count us as some minor puppet."
+ 
+ BM_deal_with_usa:0 "Deals with USA"
+ BM_deal_with_usa_desc:0 "United States of America posess world's most large economics and trade value. By siding with them and maintaining good relations both as friends and partners we will ensure the vast amount of riches will flow to our country. There is no possibility of failure, especially when Her Majesty personally will lead this effort."
+ BM_deal_with_usa_tt:0 "Placeholder"
+ 
+ BM_axis_weapon_development:0 "Weapon development initiative"
+ BM_axis_weapon_development_desc:0 "We must create and promote joint Axis development initiatives, especially those connected to war technology. By playing an active part in it we will reap all the fruits from their effort."
+ 
+ BM_great_power:0 "Great nation"
+ BM_great_power_desc:0 "No longer [Root.Owner.GetName] will be countered as some backwater of Europe! We're big, prosperous, populous and glorious nation, and we'll make everyone think along our wishes."
+ 
+ BM_restore_parliamentary_monarchy:0 "Restore Parliamentary Monarchy"
+ BM_restore_parliamentary_monarchy_desc:0 "Period of unstability comes to an end, and we are free to return to our starting position. But with better figures - puppet-king is no more, and instead we have Anatophoris family in power - and their young and geniously talented daughter on the rise..."
+ 
+ BM_candidate_for_throne:0 "Candidate for the Throne"
+ BM_candidate_for_throne_desc:0 "Young Kassiopeia Anatophoris is a young granddaughter to Aris, and she's only 23 years old. And despite that, she have sharp mind, great ambitions and she's beautiful like noone in this world. It would be quite scandalous candidature, but she'll became everyone's favourite in no time, for sure."
+ BM_Kassia_rules_tt:0 "Kassiopeia Anatophoris becomes queen of Greece."
+ 
+ BM_new_government:0 "New government"
+ BM_new_government_desc:0 "After easy victory on the elections for Kassiopeia, it was necessary to get rid of old uncooperative government and to establish a new one. Using New queen's genuine charisma, it is relatively easy to persuade best among the best to work for our cause, even from abroad." 
+ BM_Kassia_cabinet_tt:0 "Many talented people will join Kassiopeia's court."
+ 
+ BM_deals_with_opposition:0 "Deals with Opposition"
+ BM_deals_with_opposition_desc:0 "Despite the utter success of Queen Kassiopeia's first months of reign, we still have to deal with pesky opposition parties, like Democrats, Communists or Fascists. Outright crushing them would create unneeded mess, while allowing them to have their way with us is unaccceptable. However, Her Majesty does always have a plan..."
+ 
+ BM_befriend_republicans:0 "Befriend the Republicans"
+ BM_befriend_republicans_desc:0 "Repubic party of Greece, or Fieleftheron, as well as their prominent leader Elefterios Venizelos have been played major role in both rise of 1920-s, and all downfalls that followed Anatolian Catastrophe. Despite this we obviously have some goals in common, and for the betterment of our country Her Majesty may ... cooperate with them."
+ BM_befriend_republicans_tt:0 "The £faction_gre_venezelist §YRepublicans§! become §Gfriendly§!."
+ 
+ BM_integrate_nationalists:0 "Integrate Anatolian Nationalists"
+ BM_integrate_nationalists_desc:0 "Currently, anatolian refugees are politically united by Georgios Kosmidis, high rank military commander from Smyrna. They are rebellious and not very eager to help Kassiopeia achieve her deeds. According to Her Majesty's plan, we will topple his authority and promote someone more cooperative and from the same origin."
+ BM_integrate_nationalists_tt:0 "The £faction_gre_fascist §YFascists§! become §Gfriendly§!."
+ 
+ BM_crush_communists:0 "Crush Communists"
+ BM_crush_communists_desc:0 "Kommunistiko Komma made their point pretty clear - they would not tolerate any kind of monarch in power, especially in form of young spoiled girl. We must deal with that threat before they've commited something bad. Again."
+ BM_crush_communists_tt:0 "The £faction_gre_communist §YCommunists§! become §Ginsignificant§!."
+ 
+ BM_achieve_respect:0 "Achieve Respect"
+ BM_achieve_respect_desc:0 "Now, when we deal with all obstacles in political landscape, and noone dares to make fun of new queen - we must strife forward and unite whole country and her's people under Kassiopeia's bright leadership. If that is going to happen - this will be first case since disastrous 1923, and we're poised not to make the same mistakes twice.
+
+ BM_queens_ambitions:0 "Ambitions of the Queen"
+ BM_queens_ambitions_desc:0 "It is widely known how ambitious is Kassiopeia, and now she finally have both possibility and time to set those plans in motions. Our ancient enemies will see to their demise in no time!"
+ BM_queens_ambitions_tt:0 "Get access to various claim decisions"
+ 
+ BM_restore_empire:0 "Restore Empire"
+ BM_restore_empire_desc:0 "Glorious success of the recent conquests have shown everyone - disaster of 1923 was not a conclusion, more like temporary setback! Genious leadership of our queen, no, our Empress have been brought us to achievement of our dreams, and the Empire, dead since 1453, is finally restored! May it live not just for yet another 2000 years, but forever!"
+ 
+ BM_city_of_constantine:0 "City of New Rome"
+ BM_city_of_constantine_desc:0 "Constantinople have been the largest city of Europe since its founding. Even after conquest by turks it have been remained to project its glory to world. Now, when Imperial City is back in our hands, we will divert all recources to make it truly best city of the world again!"
+ 
+ BM_empress_ambitions:0 "Ambitions of the Empress"
+ BM_empress_ambitions_desc:0 "Everyone is happy and contend with recent uprising of the Empire - we have achieved our most bold dreams, defeated our ancient enemies and Most Wanted City in the World is back ours. But Empress is not content. She seeks not to sit idly while much more could be achieved. Second wave of expansion in on the rise..."
+ 
+ BM_develop_empire:0 "Develop the Empire"
+ BM_develop_empire_desc:0 "Most of recently territories reaquired are seriously underdeveloped, and our state industry is yet to be matched with our current status. Empress Kassiopeia is planing to conduct some serious measures and delegate this to best people at her disposal. "
+
+ BM_modernize_army:0 "Modernize Imperial Army"
+ BM_modernize_army_desc:0 "Recent wars have shown us that we're strong, but not strong enough. We should put serious effort in new military researches, and perhaps, in near future our country will lead the edge of modern warfare."
+ 
+ BM_population_effort:0 "Population Effort"
+ BM_population_effort_desc:0 "Most valuable of the all riches any country has is its people. Empress understands this good enough to commit to various social initiatives designed to both expand people's support and to support people."
+ 
+ BM_resources_effort:0 "Resources Effort"
+ BM_resources_effort_desc:0 "Our country is vast and so are her riches. By allocating best geologists and scientists to recource gathering technology we will ensure prosperity of our nation's economics."
+ 
+ BM_industry_effort:0 "Industry Effort"
+ BM_industry_effort_desc:0 ""
+ 
+ BM_standarts_for_living:0 "Standarts for Living"
+ BM_standarts_for_living_desc:0 ""
+ 
+ BM_encourage_immigration:0 "Encourage Immigration"
+ BM_encourage_immigration_desc:0 ""
+ 
+ BM_focus_on_education:0 "Education Focus"
+ BM_focus_on_education_desc:0 ""
+ 
+ BM_prospect_for_resources:0 "Procpect for Resources"
+ BM_prospect_for_resources_desc:0 ""
+ 
+ BM_develop_chemistry_production:0 "Chemistry Production"
+ BM_develop_chemistry_production_desc:0 ""
+ 
+ BM_rubber_plantations:0 "Rubber Plantations"
+ BM_rubber_plantations_rubber_plantations:0 ""
+ 
+ BM_deep_sea_drilling:0 "Deep Sea Drilling"
+ BM_deep_sea_drilling_desc:0 ""
+ 
+ BM_regional_development:0 "Regional Development"
+ BM_regional_development_desc:0 ""
+ 
+ BM_empire_roads:0 "Roads of Empire"
+ BM_empire_roads_desc:0 ""
+ 
+ BM_innovations_industry:0 "Innovations in the Industry"
+ BM_innovations_industry_desc:0 ""
+ 
+ BM_science_development:0 "Science Projects"
+ BM_science_development_desc:0 "" 
+ 
+ BM_nuclear_researches:0 "Nuclear Research"
+ BM_nuclear_researches_desc:0 "" 
+ 
+ BM_rocket_research:0 "Rocketry Research"
+ BM_rocket_research_desc:0 "" 
+ 
+ BM_radar:0 "Radio Detection"
+ BM_radar_desc:0 ""
+ 
+ BM_war_machines:0 "Machinery of War"
+ BM_war_machines_desc:0 ""
+ 
+ BM_light_arnaments:0 "Lignt Arnaments"
+ BM_light_arnaments_desc:0 ""
+
+ BM_airplane_development:0 "Airplane Development"
+ BM_airplane_development_desc:0 "" 
+ 
+ BM_state_tank_manufactorers:0 "State Tank Manufactorers"
+ BM_state_tank_manufactorers_desc:0 ""
+ 
+ BM_ifv_development:0 "IFV Development"
+ BM_ifv_development_desc:0 ""
+ 
+ BM_armorization:0 "Armorization"
+ BM_armorization_desc:0 ""
+ 
+ BM_fighters:0 "Fighters"
+ BM_fighters_desc:0 ""
+ 
+ BM_tactical_aviation_bombing:0 "Tactical Aviation Bombing"
+ BM_tactical_aviation_bombing_desc:0 ""  
+ 
+ BM_strategic_aviation_bombing:0 "Strategic Aviation Bombing"
+ BM_strategic_aviation_bombing_desc:0 ""
+ 
+ BM_firestrikes:0 "Fire Strikes"
+ BM_firestrikes_desc:0 ""
+ 
+ BM_personal_infantry_equipment:0 "Personal Infantry Equipment"
+ BM_personal_infantry_equipment_desc:0 "Since long ago infantry armove were oftenly discarded as uneffective and unneeded. Time to change that approach at all - our people is not a cannon fodder, and despite drastical change in cost of maintaining a regular soldier we will hope to lower casualties in corresponding manner."  
+ 
+ BM_artillery_development:0 "Artillery Development"
+ BM_artillery_development_desc:0 "It is not courage what wins you a battles, nor it is sofisticated tactic or the people themselves. It is guns, the more, the bigger - the better. Once more our empire will lead world's edge in siege weaponry development."
+ 
+ BM_portable_flamethrowers:0 "Portable Flamethrowers"
+ BM_portable_flamethrowers_desc:0 "Using Liquid flame is greek idea in its origin. By sofisticating its use we will make our weaponry deadly, and our soldiers - feared."  
+ 
+ BM_heavy_artillery_designs:0 "Heavy Artillery Designs"
+ BM_heavy_artillery_designs_desc:0 "Specialised siege artillery was actively used back in Great War times, but with enough modernisation and logistic issues solving this may prove a useful concept once more."
+ 
+ BM_self_propelled_artillery:0 "Self-Propelled Artillery"
+ BM_self_propelled_artillery_desc:0 "Idea of mounting an artillery cannon uopn a tank chassis gives us almost unlimited design capabilities."
+   
+ #Ideas
+ BM_idea_coup_instability_1:0 "Severe Instability"
+ BM_idea_coup_instability_2:0 "Mild Instability"
+ GRE_kass_debuff_0:0 "Upstart Queen"
+ GRE_kass_bonuses_1:0 "Aspiring Queen"
+ GRE_kass_bonuses_2:0 "Ambitious Queen"
+ BM_idea_kass_plus_morale:0 ""
+ BM_idea_kass_plus_morale_desc:0 ""
+ BM_idea_kass_war_plus_morale:0 ""
+ BM_idea_kass_war_plus_morale_desc:0 ""
+ 
+ #Opinion modifiers
+ BM_om_coup_consequences:0 "Tyranny condemned"
+ BM_om_coup_consequences_eng1:0 "Tyranny condemned"
+ BM_om_coup_consequences_eng2:0 "Tyranny condemned"
+ 
+ #Flags
+ BM_flag_king_got_killed:0 "George II is dead."
+ BM_flag_cyprus_plot:0 "Preparation for Cyprus uprising."
+ BM_flag_rhodos_plot:0 "Preparation for Rhodos uprising."
+ 
+ #Tank modules
+ tank_super_heavy_howitzer:0 "Super heavy howitzer"
+ tank_super_heavy_howitzer_desc:0 "Enormous howitzer capable of leveling down any entrenchments and fortresses - biggest amongst its kind, and the deadliest."
+ tank_super_heavy_aa:0 "Super heavy AA gun"
+ tank_super_heavy_aa_desc:0 "40mm quad AA guns, yes, just like the ones mounted on ships."
+ pyr_ammo_storage:0 "Liquid flame arnaments"
+ pyr_ammo_storage_desc:0 "Flammable ammo used for indirect destruction of enemy soft targets."
+ 
+ BM_firestrikes_tech:0 "Liquid fire"
+ BM_firestrikes_tech_desc:0 "Flammable ammo used for indirect destruction of enemy soft targets, either by artillery or airstrikes"
+ BM_spg_tech:0 "Extra heavy araments"

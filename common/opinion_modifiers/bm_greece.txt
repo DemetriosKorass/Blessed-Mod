@@ -1,0 +1,30 @@
+opinion_modifiers = {
+
+	BM_om_coup_consequences = {
+		value = -30
+		trade = no
+	}
+	BM_om_coup_consequences_eng1 = {
+		value = -80
+		trade = no
+	}
+	BM_om_coup_consequences_eng2 = {
+		value = -40
+		trade = no
+	}
+	BM_om_usa_trade_partners = {
+		value = 100
+		trade = yes
+	}
+	BM_om_faction_like = {
+		value = 30
+		trade = no
+	}
+	BM_om_faction_dislike = {
+		value = -30
+		trade = no
+	}
+	BM_om_denied_enosis = {
+		value = -50
+	}
+}
