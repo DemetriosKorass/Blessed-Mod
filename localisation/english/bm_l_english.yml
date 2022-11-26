@@ -33,6 +33,15 @@
   bm_decision_kassia_war_plus_morale:0 "Perform a war speech"
   bm_decision_kassia_war_plus_morale_desc:0 "Her Majesty will perform an outstanding speech, motivating our soldiers for great deeds."
   
+ bm_constantinople_endeavours_category:0 "    Rebuild of Constantinople Decisions" 
+ 
+ bm_islands_category:0 "Islands Enosis Decisions"
+    bm_decision_ask_cyprus:0 "Start Cyprus Enosis debates"
+    ask_cyprus_tt:0 "Make diplomatic effort to return Cyprus island back to Greece. Still, result depends only on UK, their willingnes, common sense and our relations."
+    bm_decision_ask_rhodes:0 "Start Rhodes Enosis debates"
+    ask_rhodes_tt:0 "Make diplomatic effort to return Rhodes island back to Greece. Still, result depends only on Italy, their willingnes, common sense and our relations."
+    bm_decision_plot_cyprus:0 "Incite Cyprus rebellion"
+    bm_decision_plot_rhodes:0 "Incite Rhodes rebellion"
  
  #Events
  bm_events.1.t:0 "King is dead and generals took power!"
@@ -190,9 +199,11 @@
  
  BM_restore_empire:0 "Restore Empire"
  BM_restore_empire_desc:0 "Glorious success of the recent conquests have shown everyone - disaster of 1923 was not a conclusion, more like temporary setback! Genious leadership of our queen, no, our Empress have been brought us to achievement of our dreams, and the Empire, dead since 1453, is finally restored! May it live not just for yet another 2000 years, but forever!"
+ BM_restore_empire_tt:0 "Changes country to §YByzantium§."
  
  BM_city_of_constantine:0 "City of New Rome"
  BM_city_of_constantine_desc:0 "Constantinople have been the largest city of Europe since its founding. Even after conquest by turks it have been remained to project its glory to world. Now, when Imperial City is back in our hands, we will divert all recources to make it truly best city of the world again!"
+ BM_city_of_constantine_tt:0 "Decisions for city development become available."
  
  BM_empress_ambitions:0 "Ambitions of the Empress"
  BM_empress_ambitions_desc:0 "Everyone is happy and contend with recent uprising of the Empire - we have achieved our most bold dreams, defeated our ancient enemies and Most Wanted City in the World is back ours. But Empress is not content. She seeks not to sit idly while much more could be achieved. Second wave of expansion in on the rise..."
@@ -301,13 +312,16 @@
    
  #Ideas
  BM_idea_coup_instability_1:0 "Severe Instability"
+ BM_idea_coup_instability_1_desc:0 "Realm is ravaged by controversies and blatant people, willing to use chaos for their needs. Any kind of decision making is almost impossible in such conditions."
  BM_idea_coup_instability_2:0 "Mild Instability"
- GRE_kass_debuff_0:0 "Upstart Queen"
- GRE_kass_bonuses_1:0 "Aspiring Queen"
- GRE_kass_bonuses_2:0 "Ambitious Queen"
- BM_idea_kass_plus_morale:0 ""
+ BM_idea_coup_instability_2_desc:0 "Despite things are getting back in control, naysaying is still trending among public figures."
+ GRE_kass_debuff_2:0 "Upstart Queen"
+ GRE_kass_debuff_2_desc:0 "Everyone sees new queen as an indulgent girl, unfit to rule the country."
+ GRE_kass_debuff_1:0 "Unrespected Queen"
+ GRE_kass_debuff_1_desc:0 "Only few people does accept Kassiopea as a rightfull ruler. Politics are not the ones for sure."
+ BM_idea_kass_plus_morale:0 "Inspired population"
  BM_idea_kass_plus_morale_desc:0 ""
- BM_idea_kass_war_plus_morale:0 ""
+ BM_idea_kass_war_plus_morale:0 "Inspired soldiers"
  BM_idea_kass_war_plus_morale_desc:0 ""
  
  #Opinion modifiers
@@ -315,8 +329,15 @@
  BM_om_coup_consequences_eng1:0 "Tyranny condemned"
  BM_om_coup_consequences_eng2:0 "Tyranny condemned"
  
+ #Covert Ops
+ bm_rhodes_plot:0 "Rhodes liberation activity"
+ bm_rhodes_plot_desc:0 "Our agents will do their best to incite unification movements in Rhodes, including distribution of weapons and surprise attack coordination. This will be insanely hard to pull out though."
+ bm_cyprus_plot:0 "Cyprus liberation activity"
+ bm_cyprus_plot_desc:0 "Our agents will do their best to incite unification movements in Cyprus, including distribution of weapons and surprise attack coordination. This will be insanely hard to pull out though."
+  
  #Flags
  BM_flag_king_got_killed:0 "George II is dead."
+ BM_flag_anatophoris_coup:0 "Will become available if king gets killed, somehow."
  BM_flag_cyprus_plot:0 "Preparation for Cyprus uprising."
  BM_flag_rhodos_plot:0 "Preparation for Rhodos uprising."
  

@@ -43,7 +43,7 @@ bm_rhodes_plot = {
 	outcome_modifiers = { boost_resistance_factor }
 	outcome_execute = {
 		custom_effect_tooltip = bm_rhodos_uprising_tt
-		hidden_effect = {
+		ROOT = { hidden_effect = {
 			FROM = {
 				delete_unit = { 
 					state = 164             
@@ -58,6 +58,7 @@ bm_rhodes_plot = {
 					}
 
 					ROOT = {
+						clr_country_flag = BM_flag_rhodos_plot
 						if = {
 							limit = { NOT = { has_country_flag = created_civil_war_template } }
 							set_country_flag = created_civil_war_template
@@ -88,7 +89,7 @@ bm_rhodes_plot = {
 					}
 				}
 			}
-		}
+		}}
 	}
 	outcome_extra_execute = { # SCOPE_OPERATION
 	}
@@ -183,7 +184,7 @@ bm_cyprus_plot = {
 	outcome_modifiers = { boost_resistance_factor }
 	outcome_execute = {
 		custom_effect_tooltip = bm_rhodos_uprising_tt
-		hidden_effect = {
+		ROOT = { hidden_effect = {
 			FROM = {
 				delete_unit = { 
 					state = 183             
@@ -198,6 +199,7 @@ bm_cyprus_plot = {
 					}
 
 					ROOT = {
+						clr_country_flag = BM_flag_cyprus_plot
 						if = {
 							limit = { NOT = { has_country_flag = created_civil_war_template } }
 							set_country_flag = created_civil_war_template
@@ -228,7 +230,7 @@ bm_cyprus_plot = {
 					}
 				}
 			}
-		}
+		}}
 	}
 	outcome_extra_execute = { # SCOPE_OPERATION
 	}

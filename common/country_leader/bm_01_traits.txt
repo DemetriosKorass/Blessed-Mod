@@ -23,8 +23,6 @@ leader_traits = {
 		air_close_air_support_defence_factor = 0.1
 		air_close_air_support_agility_factor = 0.1		
 		experience_gain_air = 0.2
-		
-		command_cap = @tier3
 	}
 	
 	bm_miras = {

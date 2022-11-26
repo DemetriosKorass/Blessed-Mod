@@ -76,6 +76,7 @@ GRE_1936_election_category = {
 		visible = {
 			NOT = { 
 				OR = {
+					has_country_flag = BM_flag_king_got_killed
 					has_country_flag = GRE_1936_election 
 					has_country_flag = GRE_kings_government
 				}

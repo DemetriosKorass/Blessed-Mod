@@ -116,8 +116,7 @@ ideas = {
 				research_speed_factor = 0.2
 				min_export = -0.1
 				trade_opinion_factor = 2
-				neutrailty_drift = 0.1
-				
+				neutrality_drift = 0.1
 				
 				send_volunteer_divisions_required = -0.9
 				send_volunteers_tension = -0.5
@@ -126,7 +125,6 @@ ideas = {
 				opinion_gain_monthly_factor = 2
 				annex_cost_factor = 0.1
 				
-				female_random_army_leader_chance = 0.3
 				max_command_power_mult = 2
 			}
 		}

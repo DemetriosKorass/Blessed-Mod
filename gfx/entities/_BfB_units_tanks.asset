@@ -3342,7 +3342,7 @@ entity = {
 	game_data = {
 		texture_anim_speed = 0.5
 	}
-
+}
 
 entity = {
 	name = "BYZ_UNIFIED_neutrality_modern_armor_entity"
@@ -3385,6 +3385,7 @@ entity = {
 	game_data = {
 		texture_anim_speed = 0.5
 	}
+}
 
 ##############
 # Democratic #
@@ -3431,6 +3432,7 @@ entity = {
 		texture_anim_speed = 0.5
 	}
 }
+
 ### Medium ----------------------------------------------------------------------------------------------------------------
 
 entity = {
@@ -3559,7 +3561,7 @@ entity = {
 	game_data = {
 		texture_anim_speed = 0.5
 	}
-
+}
 ###########
 # Fascist #
 ###########

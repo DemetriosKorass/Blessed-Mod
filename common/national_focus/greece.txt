@@ -5906,7 +5906,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
-			remove_idea = GRE_kass_debuff_1
+			remove_ideas = GRE_kass_debuff_1
 		}
 	}
 	
@@ -5951,30 +5951,26 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = BM_restore_empire_tt
 			set_country_flag = GRE_byz_unified_flag
 			GRE_set_appropriate_cosmetic_tag = yes
 			set_capital = { state = 797 }
-			797 = { add_core_of = ROOT }
-			hidden_effect = { 797 = { set_state_name = "Constantinople" } }
 			set_province_name = { id = 9833 name = "Constantinople" }
-			# Greece
-			custom_effect_tooltip = form_country_greece_coring_states_tt
 			hidden_effect = {
-				185 = { add_core_of = ROOT }
-				731 = { add_core_of = ROOT }
-				47 = { add_core_of = ROOT }
-				186 = { add_core_of = ROOT }
-				184 = { add_core_of = ROOT }
-				187 = { add_core_of = ROOT }
-				182 = { add_core_of = ROOT }
+				797 = { set_state_name = "Constantinople City" }
 				184 = { set_state_name = "Komotini" }
+				news_event = { id = wtt_news.66 hours = 6 }
+				set_global_flag = form_byzantine_empire_flag
 			}
+			add_political_power = 100
+		}
 	}
 	
 	focus = {
 		id = BM_city_of_constantine
 		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = BM_restore_empire }
+		available = {  ROOT = { controls_state = 797 }}
 		x = 0
 		y = 1
 		relative_position_id = BM_restore_empire
@@ -5989,9 +5985,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = BM_city_of_constantine_tt
 			hidden_effect = {
-				set_variable = { var = GRE_communist_loyalty value = -2 } 
-				GRE_political_instability_update_effect = yes
+				set_country_flag = BM_flag_constantinople
+				797 = { 
+					add_manpower = 3000000
+					set_state_category = large_city
+				}
+				
 			}
 		}
 	}
