@@ -5654,7 +5654,7 @@ country_event = {
 			base = 50
 		}
 		navy_experience = 5
-		add_offsite_building = { type = dockyard level = 2 } 
+		GRE = { add_offsite_building = { type = dockyard level = 2 } }
 		add_timed_idea = {
 			idea = GRE_heavy_investment
 			days = 60

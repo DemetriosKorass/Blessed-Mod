@@ -76,7 +76,7 @@ ideas = {
 				original_tag = GRE
 			}
 
-			picture = generic_monarchist_uprising
+			picture = generic_production_bonus
 				
 			removal_cost = -1
 				
@@ -93,13 +93,29 @@ ideas = {
 				original_tag = GRE
 			}
 
-			picture = generic_monarchist_uprising
+			picture = generic_victors_of_ww1
 				
 			removal_cost = -1
 				
 			modifier = {
 				offence = 0.1
 				defence = 0.2
+			}
+		}
+		
+		BM_idea_hellenic_unification = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = generic_volunteer_expedition_bonus
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = 0.1	
+				political_power_factor	= 0.15
 			}
 		}
 	}
@@ -114,6 +130,7 @@ ideas = {
 			modifier = {
                 monthly_population = 1
 				research_speed_factor = 0.2
+				production_factory_efficiency_gain_factor = 10 
 				min_export = -0.1
 				trade_opinion_factor = 2
 				neutrality_drift = 0.1

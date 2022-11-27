@@ -27,21 +27,49 @@
  GRE_put_the_king_under_house_arrest_21_desc:0 "With support of the military accuse the king of the nasty undoings he was planning to win election. However, giving generals such a possibility might cause some unforseen events..."
  GRE_1936_arrest_the_king_21_tt:0 "Something bad migh happen to the poor king..."
  
+ #Decisions
+ 
+ GRE_hold_national_showcase_for_investors_usa:0 "Lobby USA for domestic corporations"
+ 
  bm_category:0 "Imperial Throne Decisions"
-  bm_decision_kassia_plus_morale:0 "Conduct a royal trip"
-  bm_decision_kassia_plus_morale_desc:0 "Her Majesty will perform an all-country journey, visiting its regions and cities and inspiring population."
-  bm_decision_kassia_war_plus_morale:0 "Perform a war speech"
-  bm_decision_kassia_war_plus_morale_desc:0 "Her Majesty will perform an outstanding speech, motivating our soldiers for great deeds."
+    bm_decision_kassia_plus_morale:0 "Conduct a royal trip"
+    bm_decision_kassia_plus_morale_desc:0 "Her Majesty will perform an all-country journey, visiting its regions and cities and inspiring population."
+    bm_decision_kassia_war_plus_morale:0 "Perform a war speech"
+    bm_decision_kassia_war_plus_morale_desc:0 "Her Majesty will perform an outstanding speech, motivating our soldiers for great deeds."
   
  bm_constantinople_endeavours_category:0 "    Rebuild of Constantinople Decisions" 
+    bm_decision_constantinople_infrastructure_1:0 "Rebuild roads and general infrastructure"
+    bm_constantinople_endeavours_infrastructure_1_tt:0 "This endeavour upgrates infrastructure of Constantinople"
+    bm_decision_constantinople_infrastructure_2:0 "Rejuvenate naval connections and ports"
+    bm_constantinople_endeavours_infrastructure_2_tt:0 "This endeavour upgrates naval port of Constantinople"
+    bm_decision_constantinople_infrastructure_3:0 "Build aerial infrastructure and airports"
+    bm_constantinople_endeavours_infrastructure_3_tt:0 "This endeavour finishes infrastructure chain, giving us some airports and upgrading state category"
+    bm_decision_constantinople_industry_1:0 "Mend the light industry"
+    bm_constantinople_endeavours_industry_1_tt:0 "This endeavour gives us some civil production means"
+    bm_decision_constantinople_industry_2:0 "Revive the heavy industry"
+    bm_constantinople_endeavours_industry_2_tt:0 "This endeavour gives us some military production means"
+    bm_decision_constantinople_industry_3:0 "Run the shipwrights"
+    bm_constantinople_endeavours_industry_3_tt:0 "This endeavour finishes industry chain, giving us some dockyards and upgrading state category"
  
- bm_islands_category:0 "Islands Enosis Decisions"
+ bm_islands_category:0 "Islands Enosis"
     bm_decision_ask_cyprus:0 "Start Cyprus Enosis debates"
     ask_cyprus_tt:0 "Make diplomatic effort to return Cyprus island back to Greece. Still, result depends only on UK, their willingnes, common sense and our relations."
     bm_decision_ask_rhodes:0 "Start Rhodes Enosis debates"
     ask_rhodes_tt:0 "Make diplomatic effort to return Rhodes island back to Greece. Still, result depends only on Italy, their willingnes, common sense and our relations."
     bm_decision_plot_cyprus:0 "Incite Cyprus rebellion"
     bm_decision_plot_rhodes:0 "Incite Rhodes rebellion"
+    plot_island_tt:0 "Covert operation for corresponding state becomes available"
+    bm_rhodos_uprising_tt:0 "@@Placeholder@@"
+    
+ bm_kassia_ambitions_category:0 "Revive the Empire"
+    bm_decision_claim_turkey:0 "Reconquest Campaign"
+    bm_decision_claim_turkey_desc:0 "We will retake our homeland, and with it - our legacy!"
+    bm_decision_claim_bulgaria:0 "Moesia Campaign"
+    bm_decision_claim_bulgaria_desc:0 "Start hostilities against Bulgaria"
+ 
+ bm_kassia_adv_ambitions_category:0 "Empress Ambitions"
+    bm_decision_claim_balkans:0 "Start Balkan Campaign"
+    bm_decision_claim_balkans_desc:0 "Start planning reconquest of balkans against natives states"
  
  #Events
  bm_events.1.t:0 "King is dead and generals took power!"
@@ -123,6 +151,20 @@
  bm_events.44.desc:0 "Rhodosian rebellion against Italian occupation was like rapid forest fire - it all begun from minor accident and quickly grown to a full-scale uprising. So-called militia caught italian garrison with surprise and overrun them within days. With Rhodos under total militia control only choise for italian troops was to evacuate, having no time to wait for reinforcements. After this unexpected victory rebels declared their intentions to join Hellenic state, thus finally reuniting greek people of occident islands. British response is still unknown. However, Kassiopea Anatophoris, prominent monarch of [From.Owner.GetName], speaks of putting great effort honoring the fallen in this most grief accident and working together with local autorities to mend the consequences and stabilize the region."
  bm_events.44.a:0 "Italians defeated? How could this be?"
  
+ bm_events.50.t:0 "Our Entrepreneurs Return From Negotiations in Athens!"
+ bm_events.50.desc:0 "When the [FROM.GetAdjective]s decided to invite us to further discuss deepening our economic ties we could not refuse. Needless to say, they made a compelling case for why it might be ideal that [FROM.GetAdjective]'s industrial standing was strengthened. The matter of whether we seek to invest in their nation or leave their industrial potential up to fate is a matter we get to decide."
+ bm_events.50.a:0 "Alright, partners then."
+ bm_events.50.b:0 "I don’t think so."
+ bm_events.50.c:0 "Uncle Sam doesn't like you, son."
+ 
+ bm_events.51.t:0 "Success!"
+ bm_events.51.desc:0 "Good news came from across the ocean. One of our corporations managed to lure investments from American establishment. It will sure bolster our economy."
+ bm_events.51.a:0 "Ok"
+ 
+ bm_events.1001.t:0 "Debt management breakthrough!"
+ bm_events.1001.desc:0 "Morgianna Angelos, notorious enterpreteur recently employed to our cabinet, came with astonishing plan how to rule out country's debt using almost legal currency manipulations, covered under ongoing devalvation process. This might backfire us, but maybe risk is worth it?
+ bm_events.1001.a:0 "How is it even possible?"
+ 
  #Focuses
  BM_deal_with_consequences:0 "Dealing with Consequences"
  BM_deal_with_consequences_desc:0 "Recent events left our country in a horible mess - disorder in the streets, rumbling polititians, incooperable government, even from outside we hear condemning advertisments. Its either we will overcome all those obstacles, or perish underside their sheer volume."
@@ -149,14 +191,14 @@
 
  BM_our_islands:0 "Our Islands"
  BM_our_islands_desc:0 "Kýpros and Rhodos have become a victims of western colonization. This must eventually end, and both our diplomats and soldiers are ready to make that end sooner."
- BM_our_islands_tt:0 "Means for reaquirement of Cyprus and Rhodes became available via decisions."
+ BM_our_islands_tt:0 "Means for reaquirement of §YCyprus§! and §YRhodes§! became available via decisions."
  
  BM_panhellenism:0 "Panhellenism"
  BM_panhellenism_desc:0 "Once hellenic people were most numerous people of mediterrean. By uniting them all under our flag we will make both us significally stronger. No longer will world count us as some minor puppet."
  
  BM_deal_with_usa:0 "Deals with USA"
  BM_deal_with_usa_desc:0 "United States of America posess world's most large economics and trade value. By siding with them and maintaining good relations both as friends and partners we will ensure the vast amount of riches will flow to our country. There is no possibility of failure, especially when Her Majesty personally will lead this effort."
- BM_deal_with_usa_tt:0 "Placeholder"
+ BM_deal_with_usa_tt:0 "Add posibility for American investment schemes"
  
  BM_axis_weapon_development:0 "Weapon development initiative"
  BM_axis_weapon_development_desc:0 "We must create and promote joint Axis development initiatives, especially those connected to war technology. By playing an active part in it we will reap all the fruits from their effort."
@@ -199,7 +241,7 @@
  
  BM_restore_empire:0 "Restore Empire"
  BM_restore_empire_desc:0 "Glorious success of the recent conquests have shown everyone - disaster of 1923 was not a conclusion, more like temporary setback! Genious leadership of our queen, no, our Empress have been brought us to achievement of our dreams, and the Empire, dead since 1453, is finally restored! May it live not just for yet another 2000 years, but forever!"
- BM_restore_empire_tt:0 "Changes country to §YByzantium§."
+ BM_restore_empire_tt:0 "Changes country to §YByzantium§!."
  
  BM_city_of_constantine:0 "City of New Rome"
  BM_city_of_constantine_desc:0 "Constantinople have been the largest city of Europe since its founding. Even after conquest by turks it have been remained to project its glory to world. Now, when Imperial City is back in our hands, we will divert all recources to make it truly best city of the world again!"
@@ -207,6 +249,7 @@
  
  BM_empress_ambitions:0 "Ambitions of the Empress"
  BM_empress_ambitions_desc:0 "Everyone is happy and contend with recent uprising of the Empire - we have achieved our most bold dreams, defeated our ancient enemies and Most Wanted City in the World is back ours. But Empress is not content. She seeks not to sit idly while much more could be achieved. Second wave of expansion in on the rise..."
+ BM_empress_ambitions_tt:0 "Get access to claim decisions to reinstantiate the old empire"
  
  BM_develop_empire:0 "Develop the Empire"
  BM_develop_empire_desc:0 "Most of recently territories reaquired are seriously underdeveloped, and our state industry is yet to be matched with our current status. Empress Kassiopeia is planing to conduct some serious measures and delegate this to best people at her disposal. "
@@ -323,6 +366,8 @@
  BM_idea_kass_plus_morale_desc:0 ""
  BM_idea_kass_war_plus_morale:0 "Inspired soldiers"
  BM_idea_kass_war_plus_morale_desc:0 ""
+ BM_idea_hellenic_unification:0 "Hellenic Unification"
+ BM_idea_hellenic_unification_desc:0 "Long sought unification of our people finally achieved, first since XIII c."
  
  #Opinion modifiers
  BM_om_coup_consequences:0 "Tyranny condemned"

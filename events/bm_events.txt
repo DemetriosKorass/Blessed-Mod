@@ -645,6 +645,119 @@ country_event = {
 }
 
 country_event = {
+	id = bm_events.50
+	title = bm_events.50.t
+	desc = bm_events.50.desc
+	picture = GFX_report_event_gre_athens
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.50.a #moderate investment
+		ai_chance = {
+			base = 50
+		}
+		add_timed_idea = {
+			idea = GRE_moderate_investment
+			days = 30
+		}
+		hidden_effect = {
+			GRE = {
+				country_event = { id = bm_events.51 days = 2 }
+			}
+		}
+	}
+	option = {
+		name = bm_events.50.b #no investment
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10
+				num_of_available_civilian_factories < 20
+			}
+		}
+		GRE = { 
+			country_event = { id = bm_events.52 days = 2 }
+		}
+	}
+	option = {
+		name = bm_events.50.c #no investment ever!
+		ai_chance = {
+			base = 0.1
+			modifier = {
+				factor = 25
+				has_opinion = {
+					target = GRE
+					value < -50
+				}
+			}
+		}
+		GRE = {
+			country_event = { id = bm_events.53 days = 2 }
+		}
+		hidden_effect = {
+			GRE = {
+				set_country_flag = GRE_usa_rebuffed
+			}
+		}
+	}	
+}
+
+country_event = {
+	id = bm_events.51
+	title = bm_events.51.t
+	desc = bm_events.51.desc
+	picture = GFX_report_event_gre_allied_diplomacy
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.51.a 
+		trigger = { 
+			USA = {
+				has_idea = GRE_moderate_investment
+			}
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}	
+}
+country_event = {
+	id = bm_events.52
+	title = bftb_greece.170.t
+	desc = bftb_greece.170.desc
+	picture = GFX_report_event_gre_athens
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_greece.170.a
+		add_political_power = 75
+		add_stability = -0.05	
+	}
+}
+
+country_event = {
+	id = bm_events.53
+	title = bftb_greece.171.t
+	desc = bftb_greece.171.desc
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_greece.171.a 
+		add_stability = -0.1	
+	}
+}
+
+
+
+
+
+country_event = {
 	id = bm_events.1001
 	title = bm_events.1001.t
 	desc = bm_events.1001.desc

@@ -197,7 +197,7 @@ bm_islands_category = {
 		cost = 100
 		
 		complete_effect = {
-			custom_effect_tooltip = plot_cyprus_tt
+			custom_effect_tooltip = plot_island_tt
 			hidden_effect = { 
 				set_country_flag = BM_flag_cyprus_plot 
 			}
@@ -226,7 +226,7 @@ bm_islands_category = {
 		cost = 100
 		
 		complete_effect = {
-			custom_effect_tooltip = plot_rhodes_tt
+			custom_effect_tooltip = plot_island_tt
 			hidden_effect = { 
 				set_country_flag = BM_flag_rhodos_plot 
 			}
@@ -328,6 +328,7 @@ bm_kassia_ambitions_category = {
 				800 = { add_core_of = ROOT }
 				800 = { set_state_name = "Vaspurakan" }
 				set_province_name = { id = 6935 name = "Eua" }
+				797 = { add_core_of = ROOT }
 				799 = { add_core_of = ROOT }
 				799 = { set_state_name = "Antioch" }
 				set_province_name = { id = 12029 name = "Antiochia" }
@@ -981,4 +982,58 @@ bm_kassia_adv_ambitions_category = {
 		}
 	}
 }
+GRE_investment_decisions_category = { 
+	
+	GRE_hold_national_showcase_for_investors_usa = { #GERMANY
 
+		icon = generic_factory
+
+		allowed = { 
+			original_tag = GRE
+		}
+
+		available = {
+			date < 1942.1.1
+			NOT = {
+				has_war_with = USA
+				has_country_flag = GRE_usa_rebuffed
+				USA = {
+					has_capitulated = yes
+					is_puppet = yes
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = USA
+			}
+		}
+
+		days_remove = 1
+
+		cost = 100
+
+		fire_only_once = no
+
+		visible = {
+			has_completed_focus = BM_deal_with_usa
+			NOT = {
+				has_country_flag = GRE_germany_rebuffed
+			}
+		}
+
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			USA = {
+				country_event = { id = bm_events.50 days = 1 }
+			}
+		}
+	}
+	
+}

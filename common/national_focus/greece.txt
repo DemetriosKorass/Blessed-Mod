@@ -906,16 +906,6 @@ focus_tree = {
 					planning_skill = 3
 					logistics_skill = 3
 				}
-				add_corps_commander_role = {
-					character = GRE_aris_velouchiotis
-					traits = { trait_GRE_marxist_acolyte harsh_leader brilliant_strategist trickster commando }
-					skill = 3 #10
-					legacy_id = 308
-					attack_skill = 4
-					defense_skill = 2
-					planning_skill = 2
-					logistics_skill = 2
-				}
 				GRE_alexandros_papagos = { remove_unit_leader_role = yes }
 				clr_country_flag = GRE_dem_monarchy_flag
 				drop_cosmetic_tag = yes
@@ -4016,7 +4006,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GRE_sophistry_and_science
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4061,7 +4051,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_encourage_tourism
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4191,7 +4181,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_mobilise_our_economy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4297,7 +4287,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GRE_cooperate_with_foreign_monopolies
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4534,7 +4524,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_british_docking_rights
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 0
 			modifier = { 
@@ -5601,6 +5591,7 @@ focus_tree = {
 		id = BM_panhellenism
 		icon = GFX_focus_generic_befriend_greece
 		prerequisite = { focus = BM_our_islands }
+		available = { ROOT = { controls_state = 797 controls_state = 164 controls_state = 183 controls_state = 339 } }
 		x = 0
 		y = 1
 		relative_position_id = BM_our_islands
@@ -5616,7 +5607,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_political_power = 100
+			add_ideas = BM_idea_hellenic_unification
 		}
 	}
 	
@@ -5624,6 +5616,7 @@ focus_tree = {
 		id = BM_deal_with_usa
 		icon = GFX_focus_chi_mission_to_the_us
 		prerequisite = { focus = BM_approach_allies }
+		available = { USA = { has_opinion = { target = GRE value > 50 }} }
 		x = 0
 		y = 1
 		relative_position_id = BM_approach_allies
@@ -5639,7 +5632,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+				custom_effect_tooltip = BM_deal_with_usa_tt
+				USA = { add_opinion_modifier = { target = GRE modifier = BM_om_usa_trade_partners }}
+				add_opinion_modifier = { target = USA modifier = BM_om_usa_trade_partners }
 		}
 	}
 	
@@ -5928,7 +5923,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = BM_queens_ambitions_tt
+			unlock_decision_category_tooltip = bm_kassia_ambitions_category
 		}
 	}
 	
@@ -6015,7 +6010,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			unlock_decision_category_tooltip = bm_kassia_adv_ambitions_category
 		}
 	}
 	
@@ -6038,7 +6033,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			add_research_slot = 1
 		}
 	}
 	
