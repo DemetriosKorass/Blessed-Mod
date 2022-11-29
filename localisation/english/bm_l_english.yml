@@ -161,6 +161,23 @@
  bm_events.51.desc:0 "Good news came from across the ocean. One of our corporations managed to lure investments from American establishment. It will sure bolster our economy."
  bm_events.51.a:0 "Ok"
  
+ bm_events.60.t:0 "Axis weapon development initiative"
+ bm_events.60.desc:0 "Now when preparations are finally finished, we are ready to present our allies with brand new weapon development initiative. Only thing what is left is to decide the format of the new assembly."
+ bm_events.60.a:0 "Establish permanent research organisation."
+ bm_events.60.b:0 "Go for single purposed gathering." 
+ bm_axis_project_start_tt:0 "This option starts event chain about choosing and researching special military technology. You'll get confirmation event in §Y180 days§!"
+ bm_events.60.c:0 "Actually, we are stronger alone."
+ 
+ bm_events.61.t:0 "Development initiative proposal"
+ bm_events.61.desc:0 "Now when preparations are finally finished, we are ready to present our allies with brand new weapon development initiative. Only thing what is left is to decide the format of the new assembly."
+ bm_events.61.a:0 "Establish permanent research organisation." 
+ 
+ bm_events.63.t:0 "Axis weapon development initiative"
+ bm_events.63.desc:0 "Now when preparations are finally finished, we are ready to present our allies with brand new weapon development initiative. Only thing what is left is to decide the format of the new assembly."
+ bm_events.63.a:0 "Establish permanent research organisation."
+ bm_events.63.b:0 "Go for single purposed gathering." 
+ bm_events.63.c:0 "Actually, we are stronger alone."
+ 
  bm_events.1001.t:0 "Debt management breakthrough!"
  bm_events.1001.desc:0 "Morgianna Angelos, notorious enterpreteur recently employed to our cabinet, came with astonishing plan how to rule out country's debt using almost legal currency manipulations, covered under ongoing devalvation process. This might backfire us, but maybe risk is worth it?
  bm_events.1001.a:0 "How is it even possible?"

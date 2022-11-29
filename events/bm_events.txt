@@ -749,13 +749,178 @@ country_event = {
 	
 	option = {
 		name = bftb_greece.171.a 
-		add_stability = -0.1	
+		add_stability = -0.1
 	}
 }
 
+#Axis weapon development initiative start
+country_event = {
+	id = bm_events.60
+	title = bm_events.60.t
+	desc = bm_events.60.desc
+	picture = GFX_report_event_physics_lab_01
 
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.60.a
+		add_ideas = bm_idea_axis_research	#Organize international initiative
+		hidden_effect = {
+			GER = {
+				country_event = { id = bm_events.61 days = 1 }
+			}
+			ITA = {
+				country_event = { id = bm_events.61 days = 1 }
+			}
+			JAP = {
+				country_event = { id = bm_events.61 days = 1 }
+			}
+		}
+	}
+	
+	option = {
+		name = bm_events.60.b	#Focus on something material
+		
+		custom_effect_tooltip = bm_axis_project_start_tt
+		hidden_effect = { 
+			set_country_flag = bm_flag_axis_research_progress	
+			GER = {
+				country_event = { id = bm_events.62 days = 1 }
+			}
+			ITA = {
+				country_event = { id = bm_events.62 days = 1 }
+			}
+			JAP = {
+				country_event = { id = bm_events.62 days = 1 }
+			}
+		}
+	}
+	
+	option = {
+		name = bm_events.60.c #Screw them
+		add_political_power = 50	
+	}
+}
 
+#International initiative response
+country_event = {
+	id = bm_events.61
+	title = bm_events.61.t
+	desc = bm_events.61.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.61.a
+		add_ideas = bm_idea_axis_research
+	}
+	
+	option = {
+		name = bm_events.61.b
+		add_political_power = 50
+	}
+}
 
+#Project response
+country_event = {
+	id = bm_events.62
+	title = bm_events.62.t
+	desc = bm_events.62.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.62.a
+		custom_effect_tooltip = bm_axis_research_progress_tt
+		hidden_effect = {
+			set_country_flag = bm_flag_axis_research_progress
+		}
+	}
+	
+	option = {
+		name = bm_events.62.b
+		add_political_power = 50
+	}
+}
+
+#Project itself
+country_event = {
+	id = bm_events.63
+	title = bm_events.63.t
+	desc = bm_events.63.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.63.a	#Tank
+		custom_effect_tooltip = bm_axis_project_tanks_tt
+		hidden_effect = {
+			set_country_flag = bm_flag_axis_project_tanks
+		}
+	}
+	
+	option = {
+		name = bm_events.63.b	#Plane
+		add_political_power = 50
+	}
+	
+	option = {
+		name = bm_events.63.b	#Wunderwaffe
+		add_political_power = 50
+	}
+}
+
+#Breakthrough
+country_event = {
+	id = bm_events.64
+	title = bm_events.64.t
+	desc = bm_events.64.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.64.a	#Tank
+		
+		add_tech_bonus = {
+			name = bm_research_bonus_axis_tanks
+			bonus = 1.0
+			ahead_reduction = 2
+			uses = 1
+			category = cat_medium_armor
+			category = cat_heavy_armor
+		}
+	}
+	
+	option = {
+		name = bm_events.64.b	#Plane
+		
+		add_tech_bonus = {
+			name = bm_research_bonus_axis_planes
+			bonus = 1.0
+			ahead_reduction = 2
+			uses = 1
+			category = cat_medium_armor
+			category = cat_heavy_armor
+		}
+	}
+	
+	option = {
+		name = bm_events.64.b	#Wunderwaffe
+		
+		add_tech_bonus = {
+			name = bm_research_bonus_axis_wunderwaffe
+			bonus = 1.0
+			ahead_reduction = 2
+			uses = 1
+			category = cat_medium_armor
+			category = cat_heavy_armor
+		}
+	}
+}
 
 country_event = {
 	id = bm_events.1001

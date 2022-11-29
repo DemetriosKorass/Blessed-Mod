@@ -1021,7 +1021,7 @@ GRE_investment_decisions_category = {
 		visible = {
 			has_completed_focus = BM_deal_with_usa
 			NOT = {
-				has_country_flag = GRE_germany_rebuffed
+				has_country_flag = GRE_usa_rebuffed
 			}
 		}
 
