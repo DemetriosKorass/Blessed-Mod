@@ -1893,6 +1893,30 @@ ideas = {
 				mechanized_defence_factor = 0.05
 			}
 		}
+		
+		BM_GRE_Thanatophoris = {
+			
+			#picture = 
+
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = {
+				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { bm_thanatophoris_manufacturer }
+				
+			ai_will_do = {
+				factor = 1
+			}
+		}
 
 		GRE_man = {	
 

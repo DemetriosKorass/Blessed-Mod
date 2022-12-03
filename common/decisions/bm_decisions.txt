@@ -1012,7 +1012,7 @@ GRE_investment_decisions_category = {
 			}
 		}
 
-		days_remove = 1
+		days_remove = 30
 
 		cost = 100
 

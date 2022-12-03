@@ -385,6 +385,7 @@
  BM_idea_kass_war_plus_morale_desc:0 ""
  BM_idea_hellenic_unification:0 "Hellenic Unification"
  BM_idea_hellenic_unification_desc:0 "Long sought unification of our people finally achieved, first since XIII c."
+ operative_sinister_agent:0 "Sinister Agent"
  
  #Opinion modifiers
  BM_om_coup_consequences:0 "Tyranny condemned"
