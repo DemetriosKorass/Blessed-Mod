@@ -1007,8 +1007,8 @@ equipments = {
 		armor_value = 100
 		hardness = 1
 		resources = {
-			steel = 3
-			chromium = 2
+			steel = 4
+			chromium = 1
 		}
 
 		manpower = 2

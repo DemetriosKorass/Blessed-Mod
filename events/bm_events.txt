@@ -102,6 +102,9 @@ country_event = {
 			set_variable = { var = GRE_communist_loyalty value = -1 } 
 			set_variable = { var = GRE_republican_loyalty value = -1 } 
 			GRE_political_instability_update_effect = yes
+			
+			add_ideas = partial_economic_mobilisation 
+			add_political_power = 200
 		}
 	}		
 }
@@ -657,8 +660,9 @@ country_event = {
 		ai_chance = {
 			base = 50
 		}
+		add_political_power = -20
 		add_timed_idea = {
-			idea = GRE_moderate_investment
+			idea = BM_idea_USA_medium_investment
 			days = 30
 		}
 		hidden_effect = {
@@ -676,6 +680,7 @@ country_event = {
 				num_of_available_civilian_factories < 20
 			}
 		}
+		add_political_power = 20
 		GRE = { 
 			country_event = { id = bm_events.52 days = 2 }
 		}
@@ -715,11 +720,31 @@ country_event = {
 		name = bm_events.51.a 
 		trigger = { 
 			USA = {
-				has_idea = GRE_moderate_investment
+				has_idea = BM_idea_USA_medium_investment
 			}
 		}
 		add_offsite_building = {
 			type = industrial_complex
+			level = 2
+		}
+	}
+	option = {
+		name = bm_events.51.b 
+		trigger = { 
+			USA = {
+				has_idea = BM_idea_USA_heavy_investment
+			}
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 4
+		}
+		add_offsite_building = {
+			type = arms_factory
+			level = 4
+		}
+		add_offsite_building = {
+			type = dockyard
 			level = 2
 		}
 	}	
@@ -750,6 +775,67 @@ country_event = {
 	option = {
 		name = bftb_greece.171.a 
 		add_stability = -0.1
+	}
+}
+
+country_event = { 	#Kassia and 70 visit to USA
+	id = bm_events.54
+	title = bm_events.54.t
+	desc = bm_events.54.desc
+	picture = GFX_report_event_gre_cabinet_meeting
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bm_events.54.a 
+		
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = GRE
+					value > 49
+				}
+			}
+			modifier = {
+				factor = 100
+				GRE = {
+					GRE_morgianna_angelos = { is_political_advisor = yes }
+				}
+			}
+		}
+		
+		add_political_power = -50
+		add_ideas = BM_idea_USA_heavy_investment 
+		add_ideas = BM_idea_production_flexibility
+		
+		GRE = {
+			add_ideas = BM_idea_production_flexibility
+		}
+	}
+	
+	option = {
+		name = bm_events.54.b 
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = GRE
+					value < -50
+				}
+			}
+		}
+		add_political_power = 50
+		GRE = {
+			country_event = { id = bm_events.53 days = 2 }
+		}
+		hidden_effect = {
+			GRE = {
+				set_country_flag = GRE_usa_rebuffed
+			}
+		}
 	}
 }
 
@@ -931,7 +1017,7 @@ country_event = {
 	trigger={
 		focus_progress = {
 			focus = GRE_reevaluating_the_drachma
-			progress > 0.4
+			progress > 0.1
 		}
 		GRE_morgianna_angelos = { is_political_advisor = yes }
 	}
@@ -953,6 +1039,7 @@ country_event = {
 			GRE_large_payment_to_italians_debt_effect = yes
 			complete_national_focus = GRE_paying_back_our_debts_in_bulk
 		}
+		complete_national_focus = GRE_open_up_the_country
 	}	
 }
 

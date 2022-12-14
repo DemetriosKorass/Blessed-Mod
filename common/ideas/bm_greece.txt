@@ -1,6 +1,22 @@
 ideas = {
 
 	country = { 
+	
+		BM_idea_diplomacy_reanimation = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = chi_war_of_resistance3
+				
+			removal_cost = -1
+				
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.5
+				opinion_gain_monthly_factor = 0.5
+			}
+		}
 		
 		BM_idea_coup_instability_1 = { 
 				
@@ -115,7 +131,40 @@ ideas = {
 				
 			modifier = {
 				stability_factor = 0.1	
-				political_power_factor	= 0.15
+				political_power_gain = 0.5
+			}
+		}
+		
+		BM_idea_imperial_unification = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = generic_volunteer_expedition_bonus
+				
+			removal_cost = -1
+				
+			modifier = {
+				stability_factor = 0.1	
+				war_support_factor = 0.1
+				political_power_gain = 1
+				
+			}
+		}
+		
+		BM_idea_march_of_the_empire = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = generic_volunteer_expedition_bonus
+				
+			removal_cost = -1
+				
+			modifier = {
+				justify_war_goal_time = -0.8
 			}
 		}
 		
@@ -132,7 +181,311 @@ ideas = {
 			}
 		}
 		
+		BM_idea_develop_the_empire_00 = {
 		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		BM_idea_develop_the_empire_01 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BM_idea_develop_the_empire_02 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		BM_idea_develop_the_empire_03 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1 
+			}
+		}
+		
+		BM_idea_develop_the_empire_10 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 0.25
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		BM_idea_develop_the_empire_11 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 0.25
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BM_idea_develop_the_empire_12 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 0.25
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		BM_idea_develop_the_empire_13 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 0.25
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1 
+			}
+		}
+		
+		BM_idea_develop_the_empire_20 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		BM_idea_develop_the_empire_21 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BM_idea_develop_the_empire_22 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		BM_idea_develop_the_empire_23 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1 
+			}
+		}
+		
+		BM_idea_develop_the_empire_30 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05 
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		BM_idea_develop_the_empire_31 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05 
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BM_idea_develop_the_empire_32 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian
+			
+			modifier = {
+				monthly_population = 1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05 
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		BM_idea_develop_the_empire_33 = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			picture = SOV_third_five_year_plan_civilian
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05 
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.25
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1 
+			}
+		}		
+		
+		BM_idea_production_flexibility = {
+		
+			removal_cost = -1
+
+ 			picture = SOV_third_five_year_plan_civilian
+
+ 			allowed = {
+ 				always = no
+ 			}
+
+ 			modifier = {
+ 				production_speed_industrial_complex_factor = 0.05
+ 				industrial_concern_cost_factor = -0.35
+ 				tank_manufacturer_cost_factor = -0.15
+ 				materiel_manufacturer_cost_factor = -0.15
+ 				aircraft_manufacturer_cost_factor = -0.15
+ 				naval_manufacturer_cost_factor = -0.15
+ 			}
+		}
+		
+		BM_idea_USA_medium_investment = {
+		
+			removal_cost = -1
+
+ 			picture = SOV_third_five_year_plan_civilian
+
+ 			allowed = {
+ 				always = no
+ 			}
+
+ 			modifier = {
+ 				consumer_goods_factor = -0.05
+ 			}
+		}
+		
+		BM_idea_USA_heavy_investment = {
+		
+			removal_cost = -1
+
+ 			picture = SOV_third_five_year_plan_civilian
+
+ 			allowed = {
+ 				always = no
+ 			}
+
+ 			modifier = {
+ 				consumer_goods_factor = -0.1
+ 			}
+		}		
 		
 	}
 	hidden_ideas = {
@@ -147,18 +500,22 @@ ideas = {
                 monthly_population = 1
 				research_speed_factor = 0.2
 				production_factory_efficiency_gain_factor = 10 
+				refit_speed = 10
 				min_export = -0.1
 				trade_opinion_factor = 2
 				neutrality_drift = 0.1
-				
+				aircraft_manufacturer_cost_factor = -0.75
 				send_volunteer_divisions_required = -0.9
 				send_volunteers_tension = -0.5
 				generate_wargoal_tension = -0.5
 				
+				max_dig_in = 15
+				dig_in_speed_factor = 0.4
+				
 				opinion_gain_monthly_factor = 2
 				annex_cost_factor = 0.1
 				
-				max_command_power_mult = 2
+				max_command_power_mult = 1
 			}
 		}
 		praise_the_21 = {

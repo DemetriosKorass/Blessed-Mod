@@ -18,11 +18,9 @@ bm_rhodes_plot = {
 		}
 		
 		has_country_flag = BM_flag_rhodos_plot
-	#	ROOT = {
-	#		NOT = { 
-	#			controls_state = 164
-	#		}
-	#	}
+	 	FROM = { 
+	 		controls_state = 164
+	 	}
 	}
 
 	selection_target = {
@@ -159,10 +157,8 @@ bm_cyprus_plot = {
 		}
 		
 		has_country_flag = BM_flag_cyprus_plot
-		ROOT = {
-			NOT = { 
-				controls_state = 183
-			}
+		FROM = {
+			controls_state = 183
 		}
 	}
 

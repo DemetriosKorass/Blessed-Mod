@@ -2144,16 +2144,6 @@ ideas = {
 				has_dlc = "Battle for the Bosporus"
 			}
 
-			available = {
-				OR = {
-					has_country_leader = {
-						character = GRE_aristotle_onassis
-						ruling_only = yes
-					}
-					has_idea = GRE_aristotle_onassis
-				}
-			}
-
 			cost = 75
 			
 			research_bonus = {

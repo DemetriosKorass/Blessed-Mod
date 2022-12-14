@@ -4564,7 +4564,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_a_modern_navy
-		icon = GFX_goal_generic_navy_submarine
+		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = GRE_the_hellenic_navy }
 		mutually_exclusive = { focus = GRE_abandon_the_greek_turkish_naval_treaty }
 		x = 2
@@ -4584,15 +4584,17 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = GRE_a_modern_navy
-				bonus = 0.75
-				uses = 1
+				ahead_reduction = 2
+				bonus = 3
+				uses = 2
 				category = dd_tech
 			}
 			add_tech_bonus = {
 				name = GRE_a_modern_navy
-				bonus = 0.75
-				uses = 1
-				category = ss_tech
+				ahead_reduction = 2
+				bonus = 3
+				uses = 2
+				category = cv_tech
 			}
 		}
 	}	
@@ -4669,8 +4671,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = GRE_disrupting_the_great_powers
-				bonus = 0.75
-				uses = 1
+				ahead_reduction = 2
+				bonus = 3
+				uses = 2
 				category = ss_tech
 			}
 			add_doctrine_cost_reduction = {
@@ -5249,6 +5252,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.1
+			add_political_power = 100
 			swap_ideas = {
 				remove_idea = BM_idea_coup_instability_1
 				add_idea = BM_idea_coup_instability_2
@@ -5279,7 +5283,11 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BM_reanimate_foreign_diplomacy_tt
-			
+			add_political_power = 100
+			add_timed_idea = {
+				idea = BM_idea_diplomacy_reanimation
+				days = 360
+			}
 			hidden_effect = {
 				ENG = { 
 					remove_opinion_modifier = { target = GRE modifier = BM_om_coup_consequences_eng1 }
@@ -5316,7 +5324,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 100
 			remove_ideas = BM_idea_coup_instability_2
 		}
 	}
@@ -5366,7 +5374,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
-			add_political_power = 120
+			add_political_power = 100
 		}
 	}
 	
@@ -5432,7 +5440,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BM_our_islands_tt
-			
+			add_political_power = 200
 			hidden_effect = {
 				add_state_core = 183
 			}
@@ -5459,7 +5467,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 200
+			add_research_slot = 1
 			add_ideas = BM_idea_hellenic_unification
 		}
 	}
@@ -5468,7 +5477,7 @@ focus_tree = {
 		id = BM_deal_with_usa
 		icon = GFX_focus_chi_mission_to_the_us
 		prerequisite = { focus = BM_approach_allies }
-		available = { USA = { has_opinion = { target = GRE value > 50 }} }
+		available = { USA = { has_opinion = { target = GRE value > 49 }} }
 		x = 0
 		y = 1
 		relative_position_id = BM_approach_allies
@@ -5484,9 +5493,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-				custom_effect_tooltip = BM_deal_with_usa_tt
-				USA = { add_opinion_modifier = { target = GRE modifier = BM_om_usa_trade_partners }}
-				add_opinion_modifier = { target = USA modifier = BM_om_usa_trade_partners }
+			custom_effect_tooltip = BM_deal_with_usa_tt
+			USA = { 
+				add_opinion_modifier = {
+					target = GRE 
+					modifier = BM_om_usa_trade_partners 
+				}
+				country_event = {id = bm_events.54 days = 10}
+			}
+			add_opinion_modifier = { target = USA modifier = BM_om_usa_trade_partners }
 		}
 	}
 	
@@ -5508,7 +5523,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			custom_effect_tooltip = BM_axis_weapon_development_tt
 		}
 	}
 	
@@ -5516,7 +5531,7 @@ focus_tree = {
 		id = BM_great_power
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = BM_panhellenism }
-		prerequisite = { focus = BM_deal_with_usa focus = BM_axis_weapon_development }
+		available = { is_major = yes OR = { controls_state = 2 controls_state = 107 controls_state = 447 }}
 		x = 0
 		y = 1
 		relative_position_id = BM_panhellenism
@@ -5532,7 +5547,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_political_power = 200
+			swap_ideas = {
+				remove_idea = BM_idea_hellenic_unification
+				add_idea = BM_idea_imperial_unification
+			}
 		}
 	}
 
@@ -5865,7 +5884,29 @@ focus_tree = {
 			unlock_decision_category_tooltip = bm_kassia_adv_ambitions_category
 		}
 	}
-	
+	focus = {
+		id = BM_march_of_the_empire
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = BM_empress_ambitions }
+		available = { ROOT = { controls_state = 2 controls_state = 107 controls_state = 447 controls_state = 458 }}
+		x = 0
+		y = 1
+		relative_position_id = BM_empress_ambitions
+		cost = 5
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL}
+		select_effect = {
+			
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = BM_idea_march_of_the_empire
+		}
+	}
 	focus = {
 		id = BM_develop_empire
 		icon = GFX_goal_reichsautobahn
@@ -5885,7 +5926,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_research_slot = 1
+			add_ideas = BM_idea_develop_the_empire_00
 		}
 	}
 	
@@ -5908,7 +5949,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			add_tech_bonus = {
+				bonus = 3
+				ahead_reduction = 2
+				uses = 2
+				technology = main_battle_tank_chassis
+				category = cat_mechanized_equipment
+			}
 		}
 	}
 	
@@ -5930,29 +5977,39 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_resources_effort
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = BM_develop_empire }
-		x = 0
-		y = 1
-		relative_position_id = BM_develop_empire
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
+			if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_01
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_01
+					add_idea = BM_idea_develop_the_empire_11
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_02
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_02
+					add_idea = BM_idea_develop_the_empire_12
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_03
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_03
+					add_idea = BM_idea_develop_the_empire_13
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_00
+					add_idea = BM_idea_develop_the_empire_10
+				}
+			}
 		}
 	}
 	
@@ -5974,7 +6031,39 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_10
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_10
+					add_idea = BM_idea_develop_the_empire_11
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_20
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_20
+					add_idea = BM_idea_develop_the_empire_21
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_30
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_30
+					add_idea = BM_idea_develop_the_empire_31
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_00
+					add_idea = BM_idea_develop_the_empire_01
+				}
+			}
 		}
 	}
 	
@@ -5996,39 +6085,49 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_encourage_immigration
-		icon = GFX_focus_generic_the_giant_wakes
-		prerequisite = { focus = BM_standarts_for_living }
-		x = 0
-		y = 1
-		relative_position_id = BM_standarts_for_living
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
+			if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_11
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_11
+					add_idea = BM_idea_develop_the_empire_21
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_12
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_12
+					add_idea = BM_idea_develop_the_empire_22
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_13
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_13
+					add_idea = BM_idea_develop_the_empire_23
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_10
+					add_idea = BM_idea_develop_the_empire_20
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = BM_focus_on_education
 		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = BM_encourage_immigration }
+		prerequisite = { focus =  BM_standarts_for_living }
 		x = 0
 		y = 1
-		relative_position_id = BM_encourage_immigration
+		relative_position_id =  BM_standarts_for_living
 		cost = 5
 		ai_will_do = {
 			base = 1
@@ -6040,17 +6139,49 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_21
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_21
+					add_idea = BM_idea_develop_the_empire_31
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_22
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_22
+					add_idea = BM_idea_develop_the_empire_32
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_23
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_23
+					add_idea = BM_idea_develop_the_empire_33
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_20
+					add_idea = BM_idea_develop_the_empire_30
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = BM_prospect_for_resources
 		icon = GFX_focus_generic_steel
-		prerequisite = { focus = BM_resources_effort }
+		prerequisite = { focus = BM_develop_empire }
 		x = 0
 		y = 1
-		relative_position_id = BM_resources_effort
+		relative_position_id = BM_develop_empire
 		cost = 5
 		ai_will_do = {
 			base = 1
@@ -6062,7 +6193,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			custom_effect_tooltip = BM_prospect_for_resources_tt
 		}
 	}
 	
@@ -6070,7 +6201,7 @@ focus_tree = {
 		id = BM_develop_chemistry_production
 		icon = GFX_focus_generic_rubber
 		prerequisite = { focus = BM_prospect_for_resources }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = BM_prospect_for_resources
 		cost = 5
@@ -6084,37 +6215,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_rubber_plantations
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = BM_prospect_for_resources }
-		x = 1
-		y = 1
-		relative_position_id = BM_prospect_for_resources
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
+			modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 3
+        	}
 		}
 	}
 	
 	focus = {
 		id = BM_deep_sea_drilling
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = BM_develop_chemistry_production focus = BM_rubber_plantations }
-		x = 1
+		prerequisite = { focus = BM_develop_chemistry_production }
+		available = {	has_tech = excavation4	}
+		x = 0
 		y = 1
 		relative_position_id = BM_develop_chemistry_production
 		cost = 5
@@ -6128,7 +6242,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			custom_effect_tooltip = BM_deep_sea_drilling_tt
 		}
 	}
 	
@@ -6150,7 +6264,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			unlock_decision_category_tooltip = bm_regional_development_category
 		}
 	}
 	
@@ -6172,7 +6286,39 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_01
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_01
+					add_idea = BM_idea_develop_the_empire_02
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_11
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_11
+					add_idea = BM_idea_develop_the_empire_12
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_21
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_21
+					add_idea = BM_idea_develop_the_empire_22
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_31
+					add_idea = BM_idea_develop_the_empire_32
+				}
+			}
 		}
 	}
 	
@@ -6194,7 +6340,39 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_02
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_02
+					add_idea = BM_idea_develop_the_empire_03
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_12
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_12
+					add_idea = BM_idea_develop_the_empire_13
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = BM_idea_develop_the_empire_22
+				}
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_22
+					add_idea = BM_idea_develop_the_empire_23
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = BM_idea_develop_the_empire_32
+					add_idea = BM_idea_develop_the_empire_33
+				}
+			}
 		}
 	}
 	
@@ -6202,10 +6380,10 @@ focus_tree = {
 		id = BM_science_development
 		icon = GFX_focus_research2
 		prerequisite = { focus = BM_innovations_industry }
-		prerequisite = { focus = BM_modernize_army }
-		x = 2
-		y = 1
-		relative_position_id = BM_innovations_industry
+		prerequisite = { focus = BM_focus_on_education }
+		x = 0
+		y = 2
+		relative_position_id = BM_deep_sea_drilling
 		cost = 5
 		ai_will_do = {
 			base = 1
@@ -6217,7 +6395,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_research_slot = 1
 		}
 	}
 	
@@ -6239,7 +6417,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			add_tech_bonus = {
+				bonus = 2
+				ahead_reduction = 1
+				uses = 1
+				category = radar_tech
+			}
 		}
 	}
 	
@@ -6261,7 +6444,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			add_tech_bonus = {
+				bonus = 2
+				ahead_reduction = 1
+				uses = 1
+				category = nuclear
+			}
 		}
 	}
 	
@@ -6283,325 +6471,28 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_war_machines
-		icon = GFX_goal_generic_air_production
-		prerequisite = { focus = BM_modernize_army }
-		x = -3
-		y = 1
-		relative_position_id = BM_modernize_army
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_light_arnaments
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = BM_modernize_army }
-		x = 2
-		y = 1
-		relative_position_id = BM_modernize_army
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_state_tank_manufactorers
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = BM_war_machines }
-		x = -1
-		y = 1
-		relative_position_id = BM_war_machines
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_airplane_development
-		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = BM_war_machines }
-		x = 2
-		y = 1
-		relative_position_id = BM_war_machines
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_ifv_development
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = BM_state_tank_manufactorers }
-		x = 0
-		y = 1
-		relative_position_id = BM_state_tank_manufactorers
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_armorization
-		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = BM_ifv_development }
-		x = 0
-		y = 1
-		relative_position_id = BM_ifv_development
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_fighters
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = BM_airplane_development }
-		x = 0
-		y = 1
-		relative_position_id = BM_airplane_development
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_tactical_aviation_bombing
-		icon = GFX_focus_usa_escort_fighters
-		prerequisite = { focus = BM_fighters }
-		x = -1
-		y = 1
-		relative_position_id = BM_fighters
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_strategic_aviation_bombing
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = BM_fighters }
-		x = 1
-		y = 1
-		relative_position_id = BM_fighters
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_firestrikes
-		icon = GFX_focus_POL_riot_of_37
-		prerequisite = { focus = BM_tactical_aviation_bombing focus = BM_strategic_aviation_bombing focus = BM_self_propelled_artillery }
-		x = 0
-		y = 2
-		relative_position_id = BM_fighters
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			set_technology = { BM_firestrikes_tech = 1 }
-		}
-	}
-	
-	focus = {
-		id = BM_personal_infantry_equipment
-		icon = GFX_focus_chi_army_reform
-		prerequisite = { focus = BM_light_arnaments }
-		x = -1
-		y = 1
-		relative_position_id = BM_light_arnaments
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_artillery_development
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = BM_light_arnaments }
-		x = 1
-		y = 1
-		relative_position_id = BM_light_arnaments
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
-		}
-	}
-	
-	focus = {
-		id = BM_portable_flamethrowers
-		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = BM_personal_infantry_equipment }
-		x = 0
-		y = 1
-		relative_position_id = BM_personal_infantry_equipment
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-			add_political_power = 120
+			add_tech_bonus = {
+				bonus = 2
+				ahead_reduction = 1
+				uses = 2
+				category = rocketry
+			}
+			add_tech_bonus = {
+				bonus = 2
+				ahead_reduction = 1
+				uses = 1
+				category = jet_technology
+			}
 		}
 	}
 	
 	focus = {
 		id = BM_heavy_artillery_designs
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = BM_artillery_development }
-		x = 0
+		prerequisite = { focus = BM_modernize_army }
+		x = 1
 		y = 1
-		relative_position_id = BM_artillery_development
-		cost = 5
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-		select_effect = {
-			
-		}
-
-		completion_reward = {
-
-		}
-	}
-	
-	focus = {
-		id = BM_self_propelled_artillery
-		icon = GFX_foal_generic_army_tanks
-		prerequisite = { focus = BM_heavy_artillery_designs }
-		x = 0
-		y = 1
-		relative_position_id = BM_heavy_artillery_designs
+		relative_position_id = BM_modernize_army
 		cost = 5
 		ai_will_do = {
 			base = 1
@@ -6616,7 +6507,28 @@ focus_tree = {
 			set_technology = { BM_spg_tech = 1 }
 		}
 	}
+	
+	focus = {
+		id = BM_firestrikes
+		icon = GFX_focus_POL_riot_of_37
+		prerequisite = { focus = BM_modernize_army }
+		x = -1
+		y = 1
+		relative_position_id = BM_modernize_army
+		cost = 5
+		ai_will_do = {
+			base = 1
+		}
 
+		search_filters = { FOCUS_FILTER_POLITICAL}
+		select_effect = {
+			
+		}
+
+		completion_reward = {
+			set_technology = { BM_firestrikes_tech = 1 }
+		}
+	}
 }
 
 

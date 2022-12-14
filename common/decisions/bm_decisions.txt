@@ -258,6 +258,12 @@ bm_kassia_ambitions_category = {
 		
 		complete_effect = {
 			custom_effect_tooltip = form_country_turkey_coring_states_tt
+		}
+		remove_effect = {
+			declare_war_on = {
+				target = TUR
+				type = annex_everything 
+			}
 			hidden_effect = {
 				341 = { add_core_of = ROOT }
 				340 = { set_state_name = "Thracia" }
@@ -335,12 +341,6 @@ bm_kassia_ambitions_category = {
 				set_country_flag = bm_flag_turkey_claimed
 			}
 		}
-		remove_effect = {
-			declare_war_on = {
-				target = TUR
-				type = annex_everything 
-			}
-		}
 	}
 	
 	bm_decision_claim_bulgaria = {
@@ -366,6 +366,12 @@ bm_kassia_ambitions_category = {
 		
 		complete_effect = {
 			custom_effect_tooltip = form_country_boulgarias_coring_states_tt
+		}
+		remove_effect = {
+			declare_war_on = {
+				target = BUL
+				type = annex_everything 
+			}
 			hidden_effect = {
 				48 = { add_core_of = ROOT }
 				48 = { set_state_name = "Philippopolis" }
@@ -383,12 +389,6 @@ bm_kassia_ambitions_category = {
 				731 = { set_state_name = "Macedonia" }
 				801 = { add_core_of = ROOT }
 				set_country_flag = bm_flag_bulgaria_claimed
-			}
-		}
-		remove_effect = {
-			declare_war_on = {
-				target = BUL
-				type = annex_everything 
 			}
 		}
 	}
@@ -485,9 +485,9 @@ bm_constantinople_endeavours_category = {
 					}
 					modify_state_flag = {
 						flag = bm_flag_constantinople_infrastructure
-						value = 2
+						value = 1
 					}
-					add_manpower = 800000
+					add_manpower = 600000
 				}
 			}
 		}
@@ -535,7 +535,7 @@ bm_constantinople_endeavours_category = {
 					}
 					modify_state_flag = {
 						flag = bm_flag_constantinople_infrastructure
-						value = 3
+						value = 1
 					} 
 					add_manpower = 800000
 					bm_effect_upgrade_state_category = yes
@@ -632,9 +632,9 @@ bm_constantinople_endeavours_category = {
 					}
 					modify_state_flag = {
 						flag = bm_flag_constantinople_industry
-						value = 2
+						value = 1
 					}
-					add_manpower = 400000
+					add_manpower = 600000
 				}
 			}
 		}
@@ -682,9 +682,9 @@ bm_constantinople_endeavours_category = {
 					}
 					modify_state_flag = {
 						flag = bm_flag_constantinople_industry
-						value = 3
+						value = 1
 					}
-					add_manpower = 400000
+					add_manpower = 800000
 					bm_effect_upgrade_state_category = yes
 				}
 			}
@@ -1014,7 +1014,7 @@ GRE_investment_decisions_category = {
 
 		days_remove = 30
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = no
 
@@ -1032,6 +1032,950 @@ GRE_investment_decisions_category = {
 		remove_effect = {
 			USA = {
 				country_event = { id = bm_events.50 days = 1 }
+			}
+		}
+	}
+	
+}
+
+bm_regional_development_category = {
+
+	bm_decision_develop_asia_minor = {
+	
+		icon = generic_factory
+
+		allowed = { 
+			original_tag = GRE
+		}
+		
+		available = {
+			controls_state = 49
+			controls_state = 339
+			controls_state = 340
+			controls_state = 342
+			controls_state = 343
+			controls_state = 344
+			controls_state = 345
+			controls_state = 346
+			controls_state = 347
+			controls_state = 348
+			controls_state = 349
+			controls_state = 350
+			controls_state = 352
+			controls_state = 353
+			controls_state = 354
+			controls_state = 355
+			controls_state = 356
+			controls_state = 798
+			controls_state = 800
+		}
+		
+		days_remove = 320
+
+		cost = 200
+		
+		modifier = {
+			civilian_factory_use = 40
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = BM_regional_development
+		}
+		
+		remove_effect = {
+			49 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			339 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 800000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			340 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			342 = {
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			343 = {
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			344 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			345 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			346 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			347 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 400000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 347
+			}
+			348 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 100000}
+				bm_effect_upgrade_state_category = yes
+			}
+			349 = {
+				hidden_effect = { add_manpower = 100000}
+				bm_effect_upgrade_state_category = yes
+			}
+			350 = {
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			352 = {
+				hidden_effect = { add_manpower = 50000}
+				bm_effect_upgrade_state_category = yes
+			}
+			353 = {
+				hidden_effect = { add_manpower = 100000}
+				bm_effect_upgrade_state_category = yes
+			}
+			354 = {
+				hidden_effect = { add_manpower = 400000}
+				bm_effect_upgrade_state_category = yes
+			}
+			355 = {
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			356 = {
+				hidden_effect = { add_manpower = 400000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			798 = {
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			800 = {
+				hidden_effect = { add_manpower = 60000}
+				bm_effect_upgrade_state_category = yes
+			}
+		}
+		
+	}
+
+	bm_decision_develop_hellas = {
+		
+		icon = generic_factory
+
+		allowed = { 
+			original_tag = GRE
+		}
+		
+		available = {
+			controls_state = 341
+			controls_state = 797
+			controls_state = 184
+			controls_state = 731
+			controls_state = 47
+			controls_state = 185
+			controls_state = 186
+			controls_state = 187
+			controls_state = 182
+			controls_state = 183
+			controls_state = 164
+			controls_state = 805
+		}
+		
+		days_remove = 320
+
+		cost = 200
+
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = BM_regional_development
+		}
+		
+		modifier = {
+			civilian_factory_use = 40
+		}
+		
+		remove_effect = {
+			341={
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			797={
+				hidden_effect = { add_manpower = 600000}
+			}
+			184={
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			731={
+				hidden_effect = { add_manpower = 1000000}
+				bm_effect_upgrade_state_category_x3 = yes
+			}
+			47={
+				hidden_effect = { add_manpower = 1000000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			185={
+				hidden_effect = { add_manpower = 600000}
+				bm_effect_upgrade_state_category_x2 = yes
+			}
+			186={
+				hidden_effect = { add_manpower = 600000}
+				bm_effect_upgrade_state_category = yes
+			}
+			187={
+				hidden_effect = { add_manpower = 100000}
+				bm_effect_upgrade_state_category = yes
+			}
+			182={
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			183={
+				hidden_effect = { add_manpower = 200000}
+				bm_effect_upgrade_state_category = yes
+			}
+			164={
+				hidden_effect = { add_manpower = 100000}
+				bm_effect_upgrade_state_category = yes
+			}
+			805={
+				hidden_effect = { add_manpower = 100000}
+				bm_effect_upgrade_state_category = yes
+			}
+		}
+	}
+	
+	bm_decision_develop_egypt = {
+		
+		icon = generic_factory
+
+		allowed = { 
+			original_tag = GRE
+		}
+		
+		available = {
+			controls_state = 452
+			controls_state = 447
+			controls_state = 907
+			controls_state = 456
+			controls_state = 457
+			controls_state = 446
+			controls_state = 453
+			controls_state = 450
+			controls_state = 451
+		}
+		
+		days_remove = 320
+
+		cost = 200
+		
+		modifier = {
+			civilian_factory_use = 40
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = BM_regional_development
+		}
+		
+		remove_effect = {
+			447={
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 1200000}
+				set_state_category = metropolis
+			}
+			907={
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 1000000}
+				set_state_category = metropolis
+			}
+			456={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				set_state_category = large_town
+			}
+			446={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				set_state_category = large_town
+			}
+			450={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				set_state_category = large_town
+			}
+		}
+
+	}
+	
+	bm_decision_develop_levant = {
+		
+		icon = generic_factory
+
+		allowed = { 
+			original_tag = GRE
+		}
+		
+		available = {
+			controls_state = 799
+			controls_state = 677
+			controls_state = 680
+			controls_state = 554
+			controls_state = 553
+			controls_state = 454
+			controls_state = 455		
+		}
+		
+		days_remove = 320
+
+		cost = 200
+
+		modifier = {
+			civilian_factory_use = 40
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_completed_focus = BM_regional_development
+		}
+		
+		remove_effect = {
+			799={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 400000}
+				set_state_category = large_town
+			}
+			677={
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 800000}
+				set_state_category = city
+			}
+			554={
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 1000000}
+				set_state_category = city
+			}
+			553={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				set_state_category = city
+			}
+			454={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 600000}
+				set_state_category = city
+			}
+			454={
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				hidden_effect = { add_manpower = 100000}
+				set_state_category = town
+			}
+		}
+
+	}
+}
+
+prospect_for_resources = {
+
+	develop_argyrokastros_metal_deposits = { #805
+
+		icon = steel
+
+		allowed = {
+
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 805
+				state = 44
+			}
+		}
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 10
+			owns_state = 805
+			controls_state = 805
+			owns_state = 44
+			controls_state = 44
+		}
+
+		visible = {
+			has_completed_focus = BM_prospect_for_resources
+			805 = {
+				NOT = {
+					has_state_flag = argyrokastros_metal_developed
+				}
+			}
+			44 = {
+				NOT = {
+					has_state_flag = argyrokastros_metal_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		remove_effect = {
+			805 = { set_state_flag = argyrokastros_metal_developed }
+			805 = {
+				add_resource = {
+					type = steel
+					amount = 22
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
+			44 = { set_state_flag = argyrokastros_metal_developed }
+			44 = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+			}
+		}
+	}
+	develop_west_balkans_deposits = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+				state = 802
+				state = 105
+				state = 804
+			}
+		}
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 18
+			owns_state = 106
+			controls_state = 106
+			owns_state = 802
+			controls_state = 802
+			owns_state = 105
+			controls_state = 105
+			owns_state = 804
+			controls_state = 804
+		}
+
+		visible = {
+			has_completed_focus = BM_prospect_for_resources
+			106 = {
+				NOT = {
+					has_state_flag = west_balkans_developed
+				}
+			}
+			105 = {
+				NOT = {
+					has_state_flag = west_balkans_developed
+				}
+			}
+			802 = {
+				NOT = {
+					has_state_flag = west_balkans_developed
+				}
+			}
+			804 = {
+				NOT = {
+					has_state_flag = west_balkans_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 18
+		}
+
+		remove_effect = {
+			802 = { set_state_flag = west_balkans_developed }
+			802 = {
+				add_resource = {
+					type = tungsten
+					amount = 18
+				}
+			}
+			804 = { set_state_flag = west_balkans_developed }
+			804 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+			105 = { set_state_flag = west_balkans_developed }
+			105 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+			106 = { set_state_flag = west_balkans_developed }
+			106 = {
+				add_resource = {
+					type = aluminium
+					amount = 2
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+		}
+	}
+	
+	
+	develop_danube_basin_oil_deposits = { #805
+
+		icon = oil
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 46
+				state = 77
+				state = 81
+				state = 764
+				state = 45
+			}
+		}
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 20
+			owns_state = 45
+			controls_state = 45
+			owns_state = 46
+			controls_state = 46
+			owns_state = 77
+			controls_state = 77
+			owns_state = 81
+			controls_state = 81
+			owns_state = 764
+			controls_state = 764
+		}
+
+		visible = {
+			has_completed_focus = BM_prospect_for_resources
+			45 = {
+				NOT = {
+					has_state_flag = danube_basin_oil_developed
+				}
+			}
+			46 = {
+				NOT = {
+					has_state_flag = danube_basin_oil_developed
+				}
+			}
+			77 = {
+				NOT = {
+					has_state_flag = danube_basin_oil_developed
+				}
+			}
+			81 = {
+				NOT = {
+					has_state_flag = danube_basin_oil_developed
+				}
+			}
+			764 = {
+				NOT = {
+					has_state_flag = danube_basin_oil_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 20
+		}
+
+		remove_effect = {
+			45 = { set_state_flag = danube_basin_oil_developed }
+			45 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			46 = { set_state_flag = danube_basin_oil_developed }
+			46 = {
+				add_resource = {
+					type = oil
+					amount = 18
+				}
+			}
+			77 = { set_state_flag = danube_basin_oil_developed }
+			77 = {
+				add_resource = {
+					type = oil
+					amount = 3
+				}
+			}
+			81 = { set_state_flag = danube_basin_oil_developed }
+			81 = {
+				add_resource = {
+					type = oil
+					amount = 2
+				}
+			}
+			764 = { set_state_flag = danube_basin_oil_developed }
+			764 = {
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+	}
+	
+	develop_far_east_anatolia_deposits = { #805
+
+		icon = chromium
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 349
+				state = 353
+				state = 800
+				state = 352
+			}
+		}
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 20
+			owns_state = 349
+			controls_state = 349
+			owns_state = 352
+			controls_state = 352
+			owns_state = 353
+			controls_state = 353
+			owns_state = 800
+			controls_state = 800
+		}
+
+		visible = {
+			has_completed_focus = BM_prospect_for_resources
+			349 = {
+				NOT = {
+					has_state_flag = far_east_anatolia_developed
+				}
+			}
+			352 = {
+				NOT = {
+					has_state_flag = far_east_anatolia_developed
+				}
+			}
+			353 = {
+				NOT = {
+					has_state_flag = far_east_anatolia_developed
+				}
+			}
+			800 = {
+				NOT = {
+					has_state_flag = far_east_anatolia_developed
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 14
+		}
+
+		remove_effect = {
+			349 = { set_state_flag = west_balkans_developed }
+			349 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+				add_resource = {
+					type = tungsten
+					amount = 22
+				}
+			}
+			352 = { set_state_flag = west_balkans_developed }
+			352 = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+			}
+			353 = { set_state_flag = west_balkans_developed }
+			353 = {
+				add_resource = {
+					type = steel
+					amount = 30
+				}
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+			800 = { set_state_flag = west_balkans_developed }
+			800 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
+	}
+	
+	drill_aegean_sea_shelf = {
+
+		icon = oil
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 187
+				state = 164
+			}
+		}
+		available = {
+			has_tech = excavation4
+			num_of_civilian_factories_available_for_projects > 30
+			owns_state = 187
+			controls_state = 187
+		}
+
+		visible = {
+			has_completed_focus = BM_deep_sea_drilling
+			187 = {
+				NOT = {
+					has_state_flag = aegean_sea_shelf_drilled
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 30
+		}
+
+		remove_effect = {
+			187 = { set_state_flag = aegean_sea_shelf_drilled }
+			187 = {
+				add_resource = {
+					type = oil
+					amount = 28
+				}
+			}
+			164 = {
+				add_resource = {
+					type = oil
+					amount = 18
+				}
+			}
+		}
+	}
+	
+	drill_black_sea_shelf = {
+
+		icon = oil
+		
+		available = {
+			has_tech = excavation4
+			num_of_civilian_factories_available_for_projects > 30
+		}
+
+		visible = {
+			has_completed_focus = BM_deep_sea_drilling
+			356 = {
+				NOT = {
+					has_state_flag = black_sea_shelf_drilled
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 30
+		}
+
+		remove_effect = {
+			356 = { set_state_flag = black_sea_shelf_drilled }
+			356 = {
+				add_resource = {
+					type = oil
+					amount = 32
+				}
 			}
 		}
 	}

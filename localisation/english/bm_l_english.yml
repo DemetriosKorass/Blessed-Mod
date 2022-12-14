@@ -70,6 +70,21 @@
  bm_kassia_adv_ambitions_category:0 "Empress Ambitions"
     bm_decision_claim_balkans:0 "Start Balkan Campaign"
     bm_decision_claim_balkans_desc:0 "Start planning reconquest of balkans against natives states"
+    
+ bm_regional_development_category:0 "Develop the Empire Regions"
+    bm_decision_develop_asia_minor:0 "Develop Anatolia"
+    bm_decision_develop_asia_minor_desc:0 "Long ago Asia Minor was the prosperous part of the roman empire, both military and economically. Unfortunately, centuries of turkic invasions and occupation turned this land into rural region, its long ago rich cities turned to povetry. It is time to conduct any measures possible to turn this back again."
+    bm_decision_develop_hellas:0 "Develop Hellas"
+    bm_decision_develop_hellas_desc:0 "Lands of former Kingdom of Greece has been suffered through centuries of foreign occupation, and even since independence Greece itself had no finances nor means to properly develop itself."
+    bm_decision_develop_egypt:0 "Develop Egypt"
+    bm_decision_develop_egypt_desc:0 "There is no need to tell anyone about past riches of Egypt. Regions still have great potential, but because of colonial past and poor local management it would take us tremendous development efforts."
+    bm_decision_develop_levant:0 "Develop Levant"
+    bm_decision_develop_levant_desc:0 "Like the rest of our provinces, Levant, home to prosperous trade cities of the past, has suffered a lot due to colonialism and muslim invasions. Our goal is to return former prosperity to the region."
+ #Prospect for resources category
+    develop_argyrokastros_metal_deposits:0 "Develop Argyrokastros steel deposits"
+    develop_west_balkans_deposits:0 "Develop West Balkan metal deposits"
+    develop_danube_basin_oil_deposits:0 "Develop Danube basin oil deposits"
+    develop_far_east_anatolia_deposits:0 "Develop East Anatolian metal deposits"
  
  #Events
  bm_events.1.t:0 "King is dead and generals took power!"
@@ -78,9 +93,9 @@
  bm_events_1_tt:0 "King George II dies, while prominent general and popular hero of turkish war Aris Anatophoris takes his place as an acting despot. This might anger George's close relatives..."
  
  bm_events.2.t:0 "Military coup in Greece!"
- bm_events.2.desc:0 "It is known that George II, infamous greek king of british descend is dead! Circumstances are exactly unknown and highly suspicious, and official version is heart attack. Nevertheless, prominent general and popular hero of turkish war Aris Anatophoris seized power and cancelled democratic elections, which is preposterous!"
+ bm_events.2.desc:0 "It is known that George II, infamous greek king of british descend is dead! Circumstances are exactly unknown and highly suspicious, and official version is heart attack. Nevertheless, prominent general and popular hero of turkish war Aris Anatophoris seized power and postponed democratic elections, which is preposterous!"
  bm_events.2.a:0 "Outrageous!"
- bm_events.2.b:0 "My delegation would like to express concern over this most dubious situation..."
+ bm_events.2.b:0 "My delegation would like to express great concern over this most dubious situation..."
  bm_events_2a_tt:0 "We will commit various diplomatic actions to condemn such flagrant actions! Our relations with Greece will be significally worsened."
  bm_events_2b_tt:0 "We will do exactly nothing. Another coup in Greece - who cares?"
  
@@ -157,9 +172,15 @@
  bm_events.50.b:0 "I don’t think so."
  bm_events.50.c:0 "Uncle Sam doesn't like you, son."
  
- bm_events.51.t:0 "Success!"
+ bm_events.51.t:0 "USA invests!"
  bm_events.51.desc:0 "Good news came from across the ocean. One of our corporations managed to lure investments from American establishment. It will sure bolster our economy."
  bm_events.51.a:0 "Ok"
+ bm_events.51.b:0 "They are already mine!"
+ 
+ bm_events.54.t:0 "[From.Owner.GetAdjective] delegation visit!"
+ bm_events.54.desc:0 "This morning New York City has welcomed [From.Owner.GetAdjective] delegation, which consists of prominent economists, corporations representatives and her majesty Kassiopeia herself. Their official reason is to reinforce strong diplomatic and economic ties, but in fact they made it pretty clear that there is necessity for a brand new deal, on a whole new level. Perhaps it is a good possibility, or yet another greek scam attempt. "
+ bm_events.54.a:0 "We shall take your position into consideration."
+ bm_events.54.b:0 "It seems your terms are not acceptable."
  
  bm_events.60.t:0 "Axis weapon development initiative"
  bm_events.60.desc:0 "Now when preparations are finally finished, we are ready to present our allies with brand new weapon development initiative. Only thing what is left is to decide the format of the new assembly."
@@ -219,6 +240,7 @@
  
  BM_axis_weapon_development:0 "Weapon development initiative"
  BM_axis_weapon_development_desc:0 "We must create and promote joint Axis development initiatives, especially those connected to war technology. By playing an active part in it we will reap all the fruits from their effort."
+ BM_axis_weapon_development_tt:0 "Starts weapon development initiative event chain."
  
  BM_great_power:0 "Great nation"
  BM_great_power_desc:0 "No longer [Root.Owner.GetName] will be countered as some backwater of Europe! We're big, prosperous, populous and glorious nation, and we'll make everyone think along our wishes."
@@ -268,6 +290,9 @@
  BM_empress_ambitions_desc:0 "Everyone is happy and contend with recent uprising of the Empire - we have achieved our most bold dreams, defeated our ancient enemies and Most Wanted City in the World is back ours. But Empress is not content. She seeks not to sit idly while much more could be achieved. Second wave of expansion in on the rise..."
  BM_empress_ambitions_tt:0 "Get access to claim decisions to reinstantiate the old empire"
  
+ BM_march_of_the_empire:0 "March of the Empire"
+ BM_march_of_the_empire_desc:0 "Why should we stop on reclaiming and defending? World trembles with new changes of this fiery decade, and wasting this possibility to surpass great emperors of the past is not wise. Empire shall march forward!"
+ 
  BM_develop_empire:0 "Develop the Empire"
  BM_develop_empire_desc:0 "Most of recently territories reaquired are seriously underdeveloped, and our state industry is yet to be matched with our current status. Empress Kassiopeia is planing to conduct some serious measures and delegate this to best people at her disposal. "
 
@@ -277,32 +302,25 @@
  BM_population_effort:0 "Population Effort"
  BM_population_effort_desc:0 "Most valuable of the all riches any country has is its people. Empress understands this good enough to commit to various social initiatives designed to both expand people's support and to support people."
  
- BM_resources_effort:0 "Resources Effort"
- BM_resources_effort_desc:0 "Our country is vast and so are her riches. By allocating best geologists and scientists to recource gathering technology we will ensure prosperity of our nation's economics."
+ BM_prospect_for_resources:0 "Resources Effort"
+ BM_prospect_for_resources_desc:0 "Our country is vast and so are her riches. By allocating best geologists and scientists to recource gathering technology we will ensure prosperity of our nation's economics."
+ BM_prospect_for_resources_tt:0 "Unlocks few corresponding decisions"
  
  BM_industry_effort:0 "Industry Effort"
- BM_industry_effort_desc:0 ""
+ BM_industry_effort_desc:0 "Many of newly-aquired regions of the empire is still rural and non-industrialized. We need to make sure to allocate enough resources to develop them as well as aquire any possible know-hows from locals."
  
  BM_standarts_for_living:0 "Standarts for Living"
- BM_standarts_for_living_desc:0 ""
- 
- BM_encourage_immigration:0 "Encourage Immigration"
- BM_encourage_immigration_desc:0 ""
+ BM_standarts_for_living_desc:0 "Seemingly inappropriate at first, but wery rewarding in long run - even at uncertain times like this we should focus on the betterment of our awerage citizen, providing enough housings, amendments and comfort."
  
  BM_focus_on_education:0 "Education Focus"
- BM_focus_on_education_desc:0 ""
- 
- BM_prospect_for_resources:0 "Procpect for Resources"
- BM_prospect_for_resources_desc:0 ""
+ BM_focus_on_education_desc:0 "Because of obvious reasons, literacy of Empire's new regions population is a reason to worry about. We should conduct any necessary measures to eliminate illiteracy at all, thus increasing average citizen's productivity."
  
  BM_develop_chemistry_production:0 "Chemistry Production"
  BM_develop_chemistry_production_desc:0 ""
  
- BM_rubber_plantations:0 "Rubber Plantations"
- BM_rubber_plantations_rubber_plantations:0 ""
- 
  BM_deep_sea_drilling:0 "Deep Sea Drilling"
- BM_deep_sea_drilling_desc:0 ""
+ BM_deep_sea_drilling_desc:0 "With recent advanceis in mineral gathering technology, we are presented with posibility to dwelve into wast reaches of subnautical deposits. Prospecting those under shallow sea shelf seems to be amazing chance to boost our economy."
+ BM_deep_sea_drilling_tt:0 "Unlocks few corresponding decisions"
  
  BM_regional_development:0 "Regional Development"
  BM_regional_development_desc:0 ""
@@ -384,8 +402,53 @@
  BM_idea_kass_war_plus_morale:0 "Inspired soldiers"
  BM_idea_kass_war_plus_morale_desc:0 ""
  BM_idea_hellenic_unification:0 "Hellenic Unification"
- BM_idea_hellenic_unification_desc:0 "Long sought unification of our people finally achieved, first since XIII c."
+ BM_idea_hellenic_unification_desc:0 "Long sought unification of greek people finally achieved, first since XIII c."
+ BM_idea_imperial_unification:0 "Imperial Unification"
+ BM_idea_imperial_unification_desc:0 "It is an honor to be citizen of the Empire, once more."
+ BM_idea_march_of_the_empire:0 "March of the Empire"
+ BM_idea_march_of_the_empire_desc:0 "March of the empire is heavy yet so steady."
+ BM_idea_diplomacy_reanimation:0 "Diplomacy reanimation"
+ BM_idea_diplomacy_reanimation_desc:0 "With help of Kassiopeia's charm and charisma, restoring the international relationships would be a piece of cake"
+ BM_idea_develop_the_empire_00:0 "Empire Development"
+ BM_idea_develop_the_empire_00_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_01:0 "Empire Development"
+ BM_idea_develop_the_empire_01_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_02:0 "Empire Development"
+ BM_idea_develop_the_empire_02_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_03:0 "Empire Development"
+ BM_idea_develop_the_empire_03_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_10:0 "Empire Development"
+ BM_idea_develop_the_empire_10_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_11:0 "Empire Development"
+ BM_idea_develop_the_empire_11_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_12:0 "Empire Development"
+ BM_idea_develop_the_empire_12_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_13:0 "Empire Development"
+ BM_idea_develop_the_empire_13_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_20:0 "Empire Development"
+ BM_idea_develop_the_empire_20_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_21:0 "Empire Development"
+ BM_idea_develop_the_empire_21_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_22:0 "Empire Development"
+ BM_idea_develop_the_empire_22_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_23:0 "Empire Development"
+ BM_idea_develop_the_empire_23_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_30:0 "Empire Development"
+ BM_idea_develop_the_empire_30_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_31:0 "Empire Development"
+ BM_idea_develop_the_empire_31_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_32:0 "Empire Development"
+ BM_idea_develop_the_empire_32_desc:0 "Our efforts so far."
+ BM_idea_develop_the_empire_33:0 "Empire Development"
+ BM_idea_develop_the_empire_33_desc:0 "Our efforts so far."
  operative_sinister_agent:0 "Sinister Agent"
+ 
+ BM_idea_USA_medium_investment:0 "Sucessful finance project"
+ BM_idea_USA_medium_investment_desc:0 "Payback from recent investment project in Greece benefits to our economy."
+ BM_idea_USA_heavy_investment:0 "Booming market sector"
+ BM_idea_USA_heavy_investment_desc:0 "Recent events involving certain someone from Greek financial sector made our economy flourishing."
+ BM_idea_production_flexibility:0 "Greek-American market cooperation"
+ BM_idea_production_flexibility_desc:0 "Shared markets bring shared possibilities. And posibilities bring profit."
  
  #Opinion modifiers
  BM_om_coup_consequences:0 "Tyranny condemned"
@@ -414,4 +477,4 @@
  
  BM_firestrikes_tech:0 "Liquid fire"
  BM_firestrikes_tech_desc:0 "Flammable ammo used for indirect destruction of enemy soft targets, either by artillery or airstrikes"
- BM_spg_tech:0 "Extra heavy araments"
+ BM_spg_tech:0 "Extra heavy armaments"

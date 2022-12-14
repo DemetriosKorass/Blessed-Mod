@@ -1,0 +1,1 @@
+NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.02

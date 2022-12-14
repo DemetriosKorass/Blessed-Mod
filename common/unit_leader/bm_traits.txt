@@ -9,10 +9,11 @@ leader_traits = {
 		}
 
 		modifier = { 
-			operation_cost = -0.5
+			intel_network_gain = 0.4
+			operation_cost = -1
 			operation_outcome = 0.5
 			operation_risk = -0.5
-			own_operative_detection_chance = -200
+			own_operative_detection_chance = -2
 		}
 	}
 }
