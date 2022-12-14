@@ -5573,7 +5573,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 100
 			swap_ideas = {
 				remove_idea = GRE_political_instability
 				add_idea = GRE_state_of_the_nation_monarchism
@@ -5600,11 +5600,12 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BM_Kassia_rules_tt
-			
+			add_political_power = 100
 			add_ideas = GRE_kass_debuff_2 
 			
 			hidden_effect = { set_country_flag = BM_flag_kassia_rules }
 			hidden_effect = {
+				add_political_power = 100
 				set_rule = { can_send_volunteers = yes }
 				set_rule = { can_declare_war_on_same_ideology = yes }
 				set_rule = { can_only_justify_war_on_threat_country = no }
@@ -5641,6 +5642,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BM_Kassia_cabinet_tt
+			add_political_power = 100
 			swap_ideas = {
 				remove_idea = GRE_kass_debuff_2
 				add_idea = GRE_kass_debuff_1
@@ -5664,7 +5666,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 100
 		}
 	}
 	
@@ -5687,7 +5689,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BM_befriend_republicans_tt
-			add_political_power = 70
+			add_political_power = 100
 			hidden_effect = {
 				set_variable = { var = GRE_republican_loyalty value = 1 } 
 				GRE_political_instability_update_effect = yes
@@ -5714,7 +5716,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BM_integrate_nationalists_tt
-			add_political_power = 70
+			add_political_power = 100
 			
 			hidden_effect = {
 				set_variable = { var = GRE_fascist_loyalty value = 1 } 
@@ -5742,7 +5744,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = BM_crush_communists_tt
-			add_political_power = 70
+			add_political_power = 100
 			
 			hidden_effect = {
 				set_variable = { var = GRE_communist_loyalty value = -2 } 
@@ -5828,7 +5830,7 @@ focus_tree = {
 				news_event = { id = wtt_news.66 hours = 6 }
 				set_global_flag = form_byzantine_empire_flag
 			}
-			add_political_power = 100
+			add_political_power = 200
 		}
 	}
 	

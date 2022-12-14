@@ -11,6 +11,6 @@ tags={
 	"Balance"
 	"Technologies"
 }
-version="1.0.0"
+version="1.0.1"
 supported_version="1.11.*"
 path="mod/Blessed mod"

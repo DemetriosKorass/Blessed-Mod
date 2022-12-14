@@ -1896,7 +1896,7 @@ ideas = {
 		
 		BM_GRE_Thanatophoris = {
 			
-			#picture = 
+			picture = generic_tank_manufacturer_1
 
 			allowed = {
 				original_tag = GRE
@@ -1904,7 +1904,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+				#has_completed_focus = GRE_crack_down_on_foreign_monopolies
 			}
 			
 			research_bonus = {
@@ -2059,6 +2059,29 @@ ideas = {
 			
 			traits = { CAS_manufacturer }
 				
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		BM_GRE_p_nav_aircraft = {
+			
+			picture = gre_phaliron_aircraft
+			
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+				naval_strike_targetting_factor = 0.05
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -2301,6 +2324,26 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.15
 			}
+		}
+		
+		BM_GRE_angelos = {
+			
+			picture = ITA_imam
+		
+			allowed = {
+				original_tag = GRE
+			}
+
+			available = { 
+				#has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}		
+			
+			research_bonus = {
+				industry = 0.2
+			}
+			
+			traits = { bm_angelos_corp }
+			
 		}
 	}
 
