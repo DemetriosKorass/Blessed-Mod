@@ -205,6 +205,12 @@
  bm_events.1001.desc:0 "Morgianna Angelos, notorious enterpreteur recently employed to our cabinet, came with astonishing plan how to rule out country's debt using almost legal currency manipulations, covered under ongoing devalvation process. This might backfire us, but maybe risk is worth it?
  bm_events.1001.a:0 "How is it even possible?"
  
+ bm_events.1002.t:0 "Reaction to Spanish civil war"
+ bm_events.1002.desc:0 ""
+ bm_events.1002.a:0 ""
+ bm_events.1002.a_tt:0 ""
+ bm_events.1002.b:0 ""
+ 
  #Focuses
  BM_deal_with_consequences:0 "Dealing with Consequences"
  BM_deal_with_consequences_desc:0 "Recent events left our country in a horible mess - disorder in the streets, rumbling polititians, incooperable government, even from outside we hear condemning advertisments. Its either we will overcome all those obstacles, or perish underside their sheer volume."

@@ -40,7 +40,7 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
-	trench_warfare = 1
+	superior_firepower = 1
 	fuel_silos = 1
 	synth_oil_experiments = 1
 }
@@ -369,6 +369,7 @@ if = {
 	recruit_character = GRE_dimitrios_psarros # Empty character -> Can become unit leader later
 	recruit_character = GRE_panagiotis_demestichas # Empty character -> Can become unit leader later
 	recruit_character = GRE_georgios_kosmidis
+	
 	
 	recruit_character = GRE_aris_anatophoris
 	recruit_character = GRE_seilah_olsson

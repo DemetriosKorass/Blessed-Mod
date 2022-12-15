@@ -18,7 +18,7 @@ bm_category = {
 			NOT = { has_country_flag = BM_flag_recent_kassia_journey}
 		}
 		
-		cost = 50
+		cost = 20
 		
 		complete_effect = {
 			add_stability = 0.05
@@ -32,6 +32,7 @@ bm_category = {
 					days = 120
 					value = 1
 				}
+				add_political_power = 200
 			}
 		}
 	}
@@ -54,7 +55,7 @@ bm_category = {
 			NOT = { has_country_flag = BM_flag_recent_kassia_speech}
 		}
 		
-		cost = 50
+		cost = 20
 		
 		complete_effect = {
 			add_war_support = 0.05

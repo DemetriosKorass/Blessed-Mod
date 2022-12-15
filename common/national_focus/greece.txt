@@ -4587,7 +4587,7 @@ focus_tree = {
 				ahead_reduction = 2
 				bonus = 3
 				uses = 2
-				category = dd_tech
+				category = cl_tech
 			}
 			add_tech_bonus = {
 				name = GRE_a_modern_navy
@@ -4642,8 +4642,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = GRE_a_fleet_fit_for_the_aegean
-				bonus = 1.0
-				uses = 1
+				bonus = 3.0
+				uses = 2
 				category = bb_tech
 				category = bc_tech
 			}
@@ -4675,6 +4675,7 @@ focus_tree = {
 				bonus = 3
 				uses = 2
 				category = ss_tech
+				category = dd_tech
 			}
 			add_doctrine_cost_reduction = {
 				name = GRE_disrupting_the_great_powers
